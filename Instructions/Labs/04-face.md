@@ -73,7 +73,7 @@ Connettere quindi la risorsa dei servizi di intelligenza artificiale di Azure di
 
     ![Immagine delle persone in un negozio con una pianta oscurando un viso.](./media/create-face-solutions/store-camera-3.jpg)
 
-1. Caricare **store-camera-2.jpg** ed esaminare i dettagli di rilevamento dei volti restituiti. Si noti che Viso di Intelligenza artificiale di Azure può rilevare i visi parzialmente nascosti. 
+1. Caricare **store-camera-3.jpg** ed esaminare i dettagli di rilevamento dei volti restituiti. Si noti che Il viso di Intelligenza artificiale di Azure non ha rilevato il viso nascosto.
 
 In questo esercizio è stato illustrato in che modo i servizi di intelligenza artificiale di Azure possono rilevare i visi nelle immagini. Se hai tempo, prova a provare le immagini di esempio o alcune delle tue immagini.
 

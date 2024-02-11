@@ -36,7 +36,7 @@ Mantenere aperto Document Intelligence Studio.
 A questo punto è possibile analizzare una ricevuta per la società fittizia di vendita al dettaglio northwind Traders.
 
 1. Selezionare questa opzione [****https://aka.ms/mslearn-receipt](https://aka.ms/mslearn-receipt) per scaricare un documento di esempio nel computer. Apri la cartella . 
-1. Selezionare **Riconoscimento modulo Studio** per tornare alla **pagina Introduzione a Document Intelligence Studio** e in Ricevute selezionare **Prova**.
+1. Selezionare **Document Intelligence Studio** per tornare alla **pagina Introduzione a Document Intelligence Studio** e in Ricevute selezionare **Prova**.
 1. Nell'elenco a discesa predefinito assicurarsi che **sia** selezionata l'opzione Ricevute.
 1. Selezionare **Sfoglia per i file** e passare alla cartella in cui è stata salvata l'immagine. Selezionare l'immagine della ricevuta e quindi **Apri**. L'immagine viene visualizzata sul lato sinistro dello schermo.
 
