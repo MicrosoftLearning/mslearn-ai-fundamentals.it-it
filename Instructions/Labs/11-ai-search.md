@@ -183,7 +183,7 @@ Dopo aver ottenuto i documenti in archiviazione, è possibile usare Ricerca di i
     - Esegue il set di competenze cognitive per generare campi più arricchiti.
     - Esegue il mapping all'indice dei campi estratti.
 
-1. Nella parte inferiore della pagina Panoramica per la **risorsa ricerca di intelligenza artificiale di Azure selezionare la **scheda Indicizzatori**.** Questa scheda mostra l'indicizzatore** di caffè appena creato**. Attendere un minuto e selezionare **&orarr; Aggiorna** finché **Stato** non indica l'esito positivo.
+1. Tornare alla pagina della risorsa di Ricerca intelligenza artificiale di Azure. Nel riquadro sinistro, in **Gestione** ricerca selezionare  **Indicizzatori**. Selezionare l'indicizzatore** di caffè appena creato**. Attendere un minuto e selezionare **&orarr; Aggiorna** finché **Stato** non indica l'esito positivo.
 
 1. Selezionare il nome dell'indicizzatore per visualizzare altri dettagli.
 
@@ -197,21 +197,40 @@ Usare Esplora ricerche per scrivere e testare le query. Esplora ricerche è uno 
 
    ![Screenshot che mostra come trovare Esplora ricerche.](media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
 
-1. Si noti che l'indice selezionato è l'indice *coffee-index* creato.
+2. Si noti che l'indice selezionato è l'indice *coffee-index* creato. Sotto l'indice selezionato, modificare la *visualizzazione* in **visualizzazione** JSON. 
 
     ![Screenshot di Esplora ricerche.](media/create-cognitive-search-solution/search-explorer-query.png)
 
-    Immettere `search=*&$count=true` nel campo **Stringa di query** e quindi selezionare **Cerca**. La query di ricerca restituisce tutti i documenti nell'indice di ricerca, incluso un conteggio di tutti i documenti nel campo **@odata.count**. L'indice di ricerca dovrebbe restituire un documento JSON contenente i risultati della ricerca.
+**Nel campo Editor** di query JSON copiare e incollare: 
+```json
+{
+    "search": "*",
+    "count": true
+}
+```
+3. Seleziona **Cerca**. La query di ricerca restituisce tutti i documenti nell'indice di ricerca, incluso un conteggio di tutti i documenti nel campo **@odata.count**. L'indice di ricerca dovrebbe restituire un documento JSON contenente i risultati della ricerca.
 
-    > **Nota:** se viene visualizzato il messaggio **Per eseguire ricerche nel portale, consentire l'origine del portale nelle impostazioni CORS dell'indice**, selezionare **Consenti portale** e quindi selezionare **Cerca**.
+4. È il momento di applicare un filtro in base alla località. **Nel campo Editor** di query JSON copiare e incollare: 
+```json
+{
+    "search": "locations:'Chicago'",
+    "count": true
+}
+```
+5. Seleziona **Cerca**. La query cerca tutti i documenti nell'indice e filtra le recensioni con località Chicago. Nel campo dovrebbe essere visualizzato `3` `@odata.count` .
 
-1. È il momento di applicare un filtro in base alla località. Immettere `search=locations:'Chicago'` nel campo **Stringa di query** e quindi selezionare **Cerca**. La query cerca tutti i documenti nell'indice e filtra le recensioni con località Chicago.
-
-1. È il momento di applicare un filtro in base al sentiment. Immettere `search=sentiment:'negative'` nel campo **Stringa di query** e quindi selezionare **Cerca**. La query cerca tutti i documenti nell'indice e filtra le recensioni con sentiment negativo.
+6. È il momento di applicare un filtro in base al sentiment. **Nel campo Editor** di query JSON copiare e incollare: 
+```json
+{
+    "search": "sentiment:'negative'",
+    "count": true
+}
+```
+7. Seleziona **Cerca**. La query cerca tutti i documenti nell'indice e filtra le recensioni con sentiment negativo. Nel campo dovrebbe essere visualizzato `1` `@odata.count` .
 
    > **Nota:** notare come i risultati vengono ordinati in base a `@search.score`. Questo è il punteggio assegnato dal motore di ricerca per visualizzare il livello di corrispondenza dei risultati rispetto alla query specificata.
 
-1. Uno dei potenziali problemi da risolvere è il perché di determinate recensioni. Si esamineranno ora le frasi chiave associate alla recensione negativa. Quale si ritiene che possa essere il motivo della recensione?
+8. Uno dei potenziali problemi da risolvere è il perché di determinate recensioni. Si esamineranno ora le frasi chiave associate alla recensione negativa. Quale si ritiene che possa essere il motivo della recensione?
 
 ## Esaminare l'archivio conoscenze
 
@@ -219,36 +238,36 @@ Usare Esplora ricerche per scrivere e testare le query. Esplora ricerche è uno 
 
 1. Nel portale di Azure tornare all'account di archiviazione di Azure.
 
-1. Nel riquadro del menu a sinistra selezionare **Contenitori**. Selezionare il contenitore **knowledge-store**.
+2. Nel riquadro del menu a sinistra selezionare **Contenitori**. Selezionare il contenitore **knowledge-store**.
 
     ![Screenshot del contenitore knowledge-store.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-1. Selezionare uno degli elementi e quindi fare clic sul file **objectprojection.json**.
+3. Selezionare uno degli elementi e quindi fare clic sul file **objectprojection.json**.
 
     ![Screenshot di objectprojection.json.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 
-1. Selezionare **Modifica** per visualizzare il codice JSON generato per uno dei documenti dall'archivio dati di Azure.
+4. Selezionare **Modifica** per visualizzare il codice JSON generato per uno dei documenti dall'archivio dati di Azure.
 
     ![Screenshot della procedura per trovare il pulsante di modifica.](media/create-cognitive-search-solution/knowledge-store-blob-2.png)
 
-1. Selezionare il percorso di navigazione del BLOB di archiviazione nella parte superiore sinistra della schermata per tornare all'account di archiviazione *Contenitori*.
+5. Selezionare il percorso di navigazione del BLOB di archiviazione nella parte superiore sinistra della schermata per tornare all'account di archiviazione *Contenitori*.
 
     ![Screenshot del percorso di navigazione del BLOB di archiviazione.](media/create-cognitive-search-solution/knowledge-store-blob-4.png)
 
-1. In *Contenitori* selezionare il contenitore *coffee-skillset-image-projection*. Selezionare uno degli elementi.
+6. In *Contenitori* selezionare il contenitore *coffee-skillset-image-projection*. Selezionare uno degli elementi.
 
     ![Screenshot del contenitore del set di competenze.](media/create-cognitive-search-solution/knowledge-store-blob-5.png)
 
-1. Selezionare uno dei file con estensione *jpg*. Selezionare **Modifica** per visualizzare l'immagine archiviata nel documento. Si noti che tutte le immagini dei documenti vengono archiviate in questo modo.
+7. Selezionare uno dei file con estensione *jpg*. Selezionare **Modifica** per visualizzare l'immagine archiviata nel documento. Si noti che tutte le immagini dei documenti vengono archiviate in questo modo.
 
     ![Screenshot dell'immagine salvata.](media/create-cognitive-search-solution/knowledge-store-blob-3.png)
 
-1. Selezionare il percorso di navigazione del BLOB di archiviazione nella parte superiore sinistra della schermata per tornare all'account di archiviazione *Contenitori*.
+8. Selezionare il percorso di navigazione del BLOB di archiviazione nella parte superiore sinistra della schermata per tornare all'account di archiviazione *Contenitori*.
 
-1. Selezionare **Browser archiviazione** nel pannello a sinistra e selezionare **Tabelle**. È presente una tabella per ogni entità dell'indice. Selezionare la tabella *coffeeSkillsetKeyPhrases*.
+9. Selezionare **Browser archiviazione** nel pannello a sinistra e selezionare **Tabelle**. È presente una tabella per ogni entità dell'indice. Selezionare la tabella *coffeeSkillsetKeyPhrases*.
 
     Esaminare le frasi chiave che l'archivio conoscenze è riuscito ad acquisire dal contenuto delle recensioni. Molti dei campi sono chiavi, quindi è possibile collegare le tabelle come in un database relazionale. L'ultimo campo mostra le frasi chiave estratte dal set di competenze.
 
 ## Altre informazioni
 
-Questo semplice indice di ricerca solo alcune delle funzionalità del servizio di ricerca di intelligenza artificiale di Azure. Per altre informazioni sulle operazioni che è possibile eseguire con questo servizio, vedere la pagina[ servizio di ricerca di ](/azure/search/search-what-is-azure-search)Intelligenza artificiale di Azure.
+Questo semplice indice di ricerca solo alcune delle funzionalità del servizio di ricerca di intelligenza artificiale di Azure. Per altre informazioni sulle operazioni che è possibile eseguire con questo servizio, vedere la pagina[ servizio di ricerca di ](https://learn.microsoft.com/azure/search)Intelligenza artificiale di Azure.

@@ -29,7 +29,7 @@ In questo esercizio si creerà una risorsa voce di intelligenza artificiale, a m
 
 1. Selezionare questa opzione [**https://aka.ms/mslearn-speech-files](https://aka.ms/mslearn-speech-files)** per scaricare **speech.zip.** Apri la cartella . 
 
-1. Nella pagina Introduzione al riconoscimento vocale, in *Riconoscimento vocale* trovare *sintesi vocale* in tempo reale. Selezionare **Prova riconoscimento vocale in tempo reale per il testo**.
+1. Nella pagina Introduzione al* riconoscimento vocale, in *Riconoscimento vocale trovare *sintesi vocale* in tempo reale. Selezionare **Prova riconoscimento vocale in tempo reale per il testo**.
 
     ![Introduzione al riconoscimento vocale](media/recognize-synthesize-speech/try-out-speech-to-text.png)
 
