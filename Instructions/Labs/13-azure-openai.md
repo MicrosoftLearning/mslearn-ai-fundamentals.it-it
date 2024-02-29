@@ -26,9 +26,12 @@ Prima di poter usare i modelli OpenAI di Azure, è necessario effettuare il prov
 2. Creare una **risorsa OpenAI** di Azure con le impostazioni seguenti:
     - **Sottoscrizione**: *una sottoscrizione di Azure approvata per l'accesso al servizio OpenAI di Azure.*
     - **Gruppo** di risorse: *scegliere un gruppo di risorse esistente o crearne uno nuovo con un nome di propria scelta.*
-    - **Area**: *scegliere una qualsiasi area disponibile*.
-    - **Nome**: *nome univoco di propria scelta.*
+    - **Area**: Stati Uniti orientali\*
+    - **Nome**: *nome univoco di propria scelta*
     - **Piano tariffario**: Standard S0.
+
+    > \* Diverse aree hanno disponibilità e quota diverse per i modelli. In questo esercizio si userà un modello GPT-35-Turbo per la generazione di testo e un modello DALL-E per la generazione di immagini, entrambi supporti negli Stati Uniti orientali. 
+
 3. Attendere il completamento della distribuzione. Passare quindi alla risorsa Azure OpenAI distribuita nella portale di Azure.
 
 ## Esplorare Azure OpenAI Studio
@@ -58,6 +61,13 @@ Per sperimentare la generazione del linguaggio naturale, è prima necessario dis
     - **Modello**: gpt-35-turbo
     - **Versione** del modello: aggiornamento automatico per impostazione predefinita
     - **Nome** distribuzione: *nome univoco per la distribuzione del modello*
+    - **Opzioni avanzate**
+        - **Filtro** contenuto: predefinito
+        - **Tipo di distribuzione**: Standard
+        - **Limite di velocità** dei token al minuto: 5.000\*
+        - **Abilita quota** dinamica: abilitata
+
+    > \* Un limite di frequenza di 5.000 token al minuto è più che sufficiente per completare questo esercizio lasciando la capacità per altre persone che usano la stessa sottoscrizione.
 
 ## Usare il *playground chat* per lavorare con il modello
 
