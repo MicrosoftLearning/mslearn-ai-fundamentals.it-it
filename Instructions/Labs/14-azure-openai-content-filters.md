@@ -26,9 +26,22 @@ Prima di poter usare i modelli OpenAI di Azure, è necessario effettuare il prov
 2. Creare una **risorsa OpenAI** di Azure con le impostazioni seguenti:
     - **Sottoscrizione**: *una sottoscrizione di Azure approvata per l'accesso al servizio OpenAI di Azure.*
     - **Gruppo** di risorse: *scegliere un gruppo di risorse esistente o crearne uno nuovo con un nome di propria scelta.*
-    - **Area**: *scegliere una qualsiasi area disponibile*.
-    - **Nome**: *nome univoco di propria scelta.*
+    - **Area**: *effettuare una **scelta casuale** da una delle aree seguenti*\*
+        - Australia orientale
+        - Canada orientale
+        - Stati Uniti orientali
+        - Stati Uniti orientali 2
+        - Francia centrale
+        - Giappone orientale
+        - Stati Uniti centro-settentrionali
+        - Svezia centrale
+        - Svizzera settentrionale
+        - Regno Unito meridionale
+    - **Nome**: *nome univoco di propria scelta*
     - **Piano tariffario**: Standard S0.
+
+    > \* Le risorse OpenAI di Azure sono vincolate dalle quote a livello di area. Le aree elencate includono la quota predefinita per i tipi di modello usati in questo esercizio. La scelta casuale di un'area riduce il rischio che una singola area raggiunga il limite di quota negli scenari in cui si condivide una sottoscrizione con altri utenti. In caso di raggiungimento di un limite di quota più avanti nell'esercizio, potrebbe essere necessario creare un'altra risorsa in un'area diversa.
+
 3. Attendere il completamento della distribuzione. Passare quindi alla risorsa Azure OpenAI distribuita nella portale di Azure.
 
 ## Distribuire un modello
@@ -39,7 +52,14 @@ A questo momento è possibile distribuire un modello da usare tramite **Azure Op
 2. In Azure OpenAI Studio creare una nuova distribuzione con le impostazioni seguenti:
     - **Modello**: gpt-35-turbo
     - **Versione** del modello: aggiornamento automatico per impostazione predefinita
-    - **Nome** distribuzione: 35turbo
+    - **Nome** distribuzione: *nome univoco di propria scelta*
+    - **Opzioni avanzate**
+        - **Filtro** contenuto: predefinito
+        - **Tipo di distribuzione**: Standard
+        - **Limite di velocità** dei token al minuto: 5.000\*
+        - **Abilita quota** dinamica: abilitata
+
+    > \* Un limite di frequenza di 5.000 token al minuto è più che sufficiente per completare questo esercizio lasciando la capacità per altre persone che usano la stessa sottoscrizione.
 
 > **Nota**: ogni modello OpenAI di Azure è ottimizzato per un equilibrio diverso tra funzionalità e prestazioni. In questo esercizio si userà il **modello GPT 3.5 Turbo** , che è altamente in grado di generare e chattare in linguaggio naturale.
 

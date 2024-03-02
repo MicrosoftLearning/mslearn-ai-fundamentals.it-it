@@ -61,7 +61,7 @@ Connettere quindi la risorsa dei servizi di intelligenza artificiale di Azure di
     - In **Attributi** rilevati qualsiasi testo trovato nell'immagine è organizzato in una struttura gerarchica di aree, righe e parole.
     - Nell'immagine la posizione del testo è indicata da un rettangolo delimitatore, come illustrato di seguito:
 
-    ![Immagine del testo nell'immagine delimitata](media/read-text-computer-vision/text-bounding-boxes.png)
+    ![Immagine del testo nell'immagine evidenziata.](media/read-text-computer-vision/advert-bounding-boxes.jpg)
 
 1. È ora possibile provare un'altra immagine. Selezionare **Sfoglia per un file** e passare alla cartella in cui sono stati salvati i file da GitHub. Selezionare **letter.jpg**.
 
