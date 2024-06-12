@@ -18,12 +18,12 @@ In questo esercizio si esaminerà un modello predefinito in Intelligence documen
 È possibile usare Document Intelligence per intelligenza artificiale di Azure creando una *risorsa di Document Intelligence* o una *risorsa dei servizi* di intelligenza artificiale di Azure. In questo esercizio si creerà *una risorsa di Document Intelligence* , se non ne è già disponibile una.
 
 1. In un'altra scheda del browser aprire [Document Intelligence Studio](https://formrecognizer.appliedai.azure.com/studio), accedendo con l'account Microsoft.
-1. Selezionare Impostazioni e selezionare la **scheda Risorsa**. Selezionare **Crea una nuova risorsa**.** **
+1. Selezionare **Impostazioni** e selezionare la **scheda Risorsa** . Selezionare **Crea una nuova risorsa**.
 1. Nella finestra di dialogo Crea risorsa immettere quanto segue:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
     - **Gruppo di risorse**: *selezionare o creare un nuovo gruppo di risorse con un nome univoco*.
     - **Nome nuova risorsa**: *immettere un nome* univoco.
-    - **Località**: *selezionare un'area*.
+    - **Località**: *selezionare un'area. Se negli Stati Uniti orientali usare "Stati Uniti orientali 2".*
     - **** Piano tariffario: *fo gratuito (se disponibile, in caso contrario selezionare SO standard).*
 1. Selezionare **Continua** e quindi **Fine**. Attendere che la risorsa venga distribuita.
 
@@ -40,7 +40,7 @@ A questo punto è possibile analizzare una ricevuta per la società fittizia di 
 1. Nell'elenco a discesa predefinito assicurarsi che **sia** selezionata l'opzione Ricevute.
 1. Selezionare **Sfoglia per i file** e passare alla cartella in cui è stata salvata l'immagine. Selezionare l'immagine della ricevuta e quindi **Apri**. L'immagine viene visualizzata sul lato sinistro dello schermo.
 
-    ![Ricezione Northwind.](media/document-intelligence/northwind-receipt.jpg)
+    ![Screenshot di una ricevuta northwind.](media/document-intelligence/receipt.jpg)
 
 1. A destra selezionare **Esegui analisi**.
 1. Quando l'analisi è stata eseguita, vengono restituiti i risultati. Si noti che il servizio ha riconosciuto campi dati specifici, ad esempio il nome del commerciante, l'indirizzo, il numero di telefono e la data e l'ora della transazione, nonché gli elementi di riga, il subtotale, l'imposta e gli importi totali. Accanto a ogni campo è una probabilità percentuale che il campo sia corretto.

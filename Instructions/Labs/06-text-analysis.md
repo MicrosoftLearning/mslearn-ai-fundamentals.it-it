@@ -24,7 +24,7 @@ Il servizio di linguaggio di intelligenza artificiale di Azure include funzional
 1. Nella pagina **Crea lingua** configurarla con le impostazioni seguenti:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
     - **Gruppo di risorse**: *selezionare o creare un nuovo gruppo di risorse con un nome univoco*.
-    - **Area**: Stati Uniti orientali.
+    - **Area**: *selezionare l'area geografica più vicina. Se negli Stati Uniti orientali usare "Stati Uniti orientali 2".*
     - **Nome**: *immettere un nome univoco*.
     - **Piano tariffario**: *F0 o S gratuito se F0 gratuito non è disponibile*
     - **Selezionando questa casella si riconosce che ho letto e compreso tutti i termini seguenti**: *Selezionato*.
@@ -97,7 +97,7 @@ Selezionare **di nuovo Frase 1** per chiudere.
 
 1. Selezionare **Esegui** ed esaminare il sentiment insieme al livello di attendibilità. Esaminare il testo e confrontare il testo con l'analisi del sentiment restituito dal servizio.
 
-In questo esercizio è stato usato Language Studio per creare una nuova risorsa lingua o usare una risorsa lingua esistente. È stata abilitata la risorsa in Impostazioni prima di provare il servizio di data mining sentiment e opinion mining. È stato quindi testato il servizio con tre parti di testo.
+In questo esercizio è stato usato Language Studio per creare una nuova risorsa lingua o usare una risorsa lingua esistente. È stata abilitata la risorsa in Impostazioni prima di provare il servizio di data mining Sentiment e opinion mining. È stato quindi testato il servizio con tre parti di testo.
 
 ## Eseguire la pulizia
 

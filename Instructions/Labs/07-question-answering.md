@@ -31,7 +31,7 @@ Per usare la risposta alle domande, è necessaria una **risorsa Lingua** .
         - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
         - **Gruppo di risorse**: *selezionare un gruppo di risorse esistente o crearne uno nuovo*.
     - **Dettagli dell'istanza**
-        - **Area**: *selezionare un'area*      
+        - **Area**: *selezionare un'area. Se negli Stati Uniti orientali usare "Stati Uniti orientali 2"*      
         - **Nome**: *specificare un nome univoco per la risorsa Lingua*.
         - **Piano tariffario**: S (1.000 chiamate al minuto).
     - **Risposta personalizzata alle domande**
@@ -148,7 +148,7 @@ La knowledge base offre un servizio back-end che le applicazioni client possono 
         - **Nome dell'account**: *pre-popolato con il nome della risorsa*
 
 1. Seleziona **Crea**. Attendere quindi che il bot venga creato (l'icona di notifica in alto a destra, simile a una campana, verrà animata durante l'attesa). Quindi, nella notifica che la distribuzione è stata completata, selezionare **Vai alla risorsa** (o in alternativa, nella home page fare clic su **Gruppi** di risorse, aprire il gruppo di risorse in cui è stato creato il bot e selezionare la **risorsa bot di Azure** ).
-1. Nel riquadro a sinistra del bot cercare **Impostazioni**, selezionare **Test in chat Web** e attendere che il bot visualizzi il messaggio **Hello and Welcome** (l'inizializzazione potrebbe richiedere alcuni secondi).
+1. Nel riquadro sinistro del bot cercare **Impostazioni**, selezionare **Test in chat Web** e attendere che il bot visualizzi il messaggio **Hello and Welcome** (l'inizializzazione potrebbe richiedere alcuni secondi).
 1. Usa l'interfaccia della chat di test per assicurarti che il bot risponda alle domande dalla tua knowledge base come previsto. Provare ad esempio a inviare `I need to cancel my hotel`.
 
 Sperimentare l'uso del bot. Probabilmente si noterà che può rispondere alle domande disponibili nelle domande frequenti in modo abbastanza accurato, ma avrà una capacità limitata di interpretare le domande per cui non è stato sottoposto a training. È sempre possibile usare Language Studio per modificare la knowledge base per migliorarla e ripubblicarla.

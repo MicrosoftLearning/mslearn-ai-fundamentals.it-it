@@ -29,28 +29,28 @@ Prima di usare la piattaforma, è necessario associare una risorsa Servizi di Az
 
 ![Screenshot dell'icona delle impostazioni in alto a destra della schermata, accanto alle icone della campana, del punto interrogativo e dello smile.](./media/content-safety/settings-toggle.png)
 
-1. Nella pagina **Impostazioni** verranno visualizzate una scheda *Directory* e una scheda *Risorsa*. Nella scheda *Risorsa*, selezionare **Crea una nuova risorsa**. Si aprirà la pagina per creare una risorsa nel portale di Azure.
+2. Nella pagina **Impostazioni** verranno visualizzate una scheda *Directory* e una scheda *Risorsa*. Nella scheda *Risorsa*, selezionare **Crea una nuova risorsa**. Si aprirà la pagina per creare una risorsa nel portale di Azure.
 
 > **Nota:** la scheda *Directory* consente agli utenti di selezionare directory diverse da cui creare risorse. Non è necessario modificarne le impostazioni, a meno che non si voglia usare una directory diversa. 
 
 ![Screenshot di dove selezionare la voce Crea una nuova risorsa dalla pagina delle impostazioni di Content Safety Studio.](./media/content-safety/create-new-resource-from-studio.png)
 
-1. Nella pagina *Crea sicurezza dei contenuti* nel [portale di Azure](https://portal.azure.com?auzre-portal=true) è necessario configurare diversi dettagli per creare la risorsa. Eseguire la configurazione con le seguenti impostazioni:
+3. Nella pagina *Crea sicurezza dei contenuti* nel [portale di Azure](https://portal.azure.com?azure-portal=true) è necessario configurare diversi dettagli per creare la risorsa. Eseguire la configurazione con le seguenti impostazioni:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
     - **Gruppo di risorse**: *selezionare o creare un nuovo gruppo di risorse con un nome univoco*.
-    - **Area**: *scegliere una qualsiasi area disponibile*.
+    - **Area**: *scegliere qualsiasi area disponibile. Se negli Stati Uniti orientali usare "Stati Uniti orientali 2".*
     - **Nome**: *immettere un nome univoco*.
     - **Piano tariffario**: gratuito F0.
 
-1. Selezionare **Rivedi e crea** per rivedere la configurazione. Selezionare **Crea**. La schermata indicherà quando la distribuzione è stata completata. 
+4. Selezionare **Rivedi e crea** per rivedere la configurazione. Selezionare **Crea**. La schermata indicherà quando la distribuzione è stata completata. 
 
 *Congratulazioni! È stata appena creata una risorsa Servizi di Azure AI o ne è stato effettuato il provisioning. Quella di cui è stato effettuato il provisioning in particolare è una risorsa del servizio Sicurezza dei contenuti a servizio singolo.*
 
-1. Una volta completata la distribuzione, aprire una nuova scheda e tornare a [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
+5. Una volta completata la distribuzione, aprire una nuova scheda e tornare a [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
 
-1. Selezionare nuovamente l'icona delle **impostazioni** in alto a destra della schermata. La risorsa appena creata dovrebbe essere stata aggiunta all'elenco.  
+6. Selezionare nuovamente l'icona delle **impostazioni** in alto a destra della schermata. La risorsa appena creata dovrebbe essere stata aggiunta all'elenco.  
 
-1. Nella pagina delle impostazioni di Content Safety Studio, selezionare la risorsa del Servizio di Azure AI appena creata e fare clic su **Usa risorsa** nella parte inferiore della schermata. Si tornerà così alla pagina iniziale della piattaforma. Ora è possibile iniziare a usare la piattaforma con la risorsa appena creata.
+7. Nella pagina delle impostazioni di Content Safety Studio, selezionare la risorsa del Servizio di Azure AI appena creata e fare clic su **Usa risorsa** nella parte inferiore della schermata. Si tornerà così alla pagina iniziale della piattaforma. Ora è possibile iniziare a usare la piattaforma con la risorsa appena creata.
 
 ## Provare la moderazione testo in Content Safety Studio
 

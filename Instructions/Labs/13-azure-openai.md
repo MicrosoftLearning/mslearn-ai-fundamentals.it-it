@@ -3,7 +3,7 @@ lab:
   title: Esplorare il servizio OpenAI di Azure
 ---
 
-# Esplorare Azure OpenAI
+# Esplorare OpenAI di Azure
 
 Il servizio Azure OpenAI offre i modelli di intelligenza artificiale generativi sviluppati da OpenAI alla piattaforma Azure, consentendo di sviluppare potenti soluzioni di intelligenza artificiale che traggono vantaggio dalla sicurezza, dalla scalabilità e dall'integrazione dei servizi forniti dalla piattaforma cloud di Azure.
 
@@ -30,7 +30,7 @@ Prima di poter usare i modelli OpenAI di Azure, è necessario effettuare il prov
     - **Nome**: *nome univoco di propria scelta*
     - **Piano tariffario**: Standard S0.
 
-    > \* Diverse aree hanno disponibilità e quota diverse per i modelli. In questo esercizio si userà un modello GPT-35-Turbo per la generazione di testo e un modello DALL-E per la generazione di immagini, entrambi supporti negli Stati Uniti orientali. 
+    > \* Diverse aree hanno disponibilità e quota diverse per i modelli. In questo esercizio si userà un modello GPT-35-Turbo per la generazione di testo e un modello DALL-E per la generazione di immagini, entrambi supportati negli Stati Uniti orientali.
 
 3. Attendere il completamento della distribuzione. Passare quindi alla risorsa Azure OpenAI distribuita nella portale di Azure.
 

@@ -18,14 +18,14 @@ Per testare le funzionalità di rilevamento dei volti del servizio Viso di Intel
 1. Fare clic sul pulsante **&#65291;Crea una risorsa** e cercare *Servizi di Azure Ai*. Selezionare **Crea** un piano di **Servizi di Azure AI**. Verrà visualizzata una pagina per creare una risorsa Servizi di Azure AI. Eseguire la configurazione con le seguenti impostazioni:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
     - **Gruppo di risorse**: *selezionare o creare un nuovo gruppo di risorse con un nome univoco*.
-    - **Area**: Stati Uniti orientali.
+    - **Area**: *selezionare l'area geografica più vicina. Se negli Stati Uniti orientali usare "Stati Uniti orientali 2".*
     - **Nome**: *immettere un nome univoco*.
     - **Piano tariffario**: *Standard S0.*
     - **Selezionando questa casella si riconosce che ho letto e compreso tutti i termini seguenti**: *Selezionato*.
 
 1. Selezionare **Rivedi e crea** e quindi **Crea** e attendere il completamento della distribuzione.
 
-## Connessione la risorsa del servizio azure per intelligenza artificiale in Vision Studio
+## Connettere la risorsa del servizio Intelligenza artificiale di Azure a Vision Studio
 
 Connettere quindi la risorsa dei servizi di intelligenza artificiale di Azure di cui è stato effettuato il provisioning in precedenza a Vision Studio.
 

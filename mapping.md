@@ -16,6 +16,6 @@ Il sottoinsieme dei lab su AI-900 usati in questo corso è mappato ai moduli com
 | Visione artificiale ai-900 | Analizzare le immagini in Vision Studio | [Istruzioni lab](https://go.microsoft.com/fwlink/?linkid=2250145) |
 | Elaborazione del linguaggio naturale ai-900 | Analizzare il testo con Language Studio | [Istruzioni lab](https://go.microsoft.com/fwlink/?linkid=2250314) |
 | Intelligence sui documenti ai-900 | Estrarre i dati dei moduli in Document Intelligence Studio | [Istruzioni lab](https://go.microsoft.com/fwlink/?linkid=2250315) |
-| Intelligenza artificiale generativa AI-900 | Esplorare l'intelligenza artificiale generativa con Bing Copilot | [Istruzioni lab](https://go.microsoft.com/fwlink/?linkid=2249955) |
+| Intelligenza artificiale generativa AI-900 | Esplorare Microsoft Copilot in Microsoft Edge | [Istruzioni lab](https://go.microsoft.com/fwlink/?linkid=2249955) |
 
 

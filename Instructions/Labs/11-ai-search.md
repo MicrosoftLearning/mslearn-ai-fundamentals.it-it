@@ -1,11 +1,11 @@
 ---
 lab:
-  title: Esplorare un indice di Ricerca intelligenza artificiale di Azure
+  title: Esplorare un indice di Azure AI Search (interfaccia utente)
 ---
 
-# Esplorare un indice di Ricerca intelligenza artificiale di Azure
+# Esplorare un indice di Azure AI Search (interfaccia utente)
 
-Si supponga di lavorare per Fourth Coffee, una catena nazionale di caffetterie. Viene chiesto di creare una soluzione di knowledge mining che semplifichi la ricerca di informazioni dettagliate sulle esperienze dei clienti. Si decide di creare un indice di Ricerca di intelligenza artificiale di Azure usando i dati estratti dalle recensioni dei clienti.  
+Si supponga di lavorare per Fourth Coffee, una catena nazionale di caffetterie. Viene chiesto di creare una soluzione di knowledge mining che semplifichi la ricerca di informazioni dettagliate sulle esperienze dei clienti. Si decide di creare un indice di Azure AI Search usando i dati estratti dalle recensioni dei clienti.  
 
 In questo lab si eseguiranno le operazioni seguenti:
 
@@ -20,37 +20,37 @@ In questo lab si eseguiranno le operazioni seguenti:
 
 La soluzione che verrà creata per Fourth Coffe richiede le risorse seguenti nella sottoscrizione di Azure:
 
-- Una **risorsa di Ricerca** intelligenza artificiale di Azure, che gestirà l'indicizzazione e l'esecuzione di query.
+- Una risorsa di **Azure AI Search**, che gestirà l'indicizzazione e l'esecuzione di query.
 - Una risorsa **Servizi di Azure AI**, che fornisce servizi di intelligenza artificiale per le competenze che la soluzione di ricerca può usare per arricchire i dati nell'origine dati con informazioni dettagliate generate dall'intelligenza artificiale.
 
-    > **Nota** Le risorse di Ricerca intelligenza artificiale di Azure e dei servizi di intelligenza artificiale di Azure devono trovarsi nella stessa posizione.
+    > **Nota** Le risorse di Azure AI Search e dei Servizi di Azure AI devono trovarsi nella stessa posizione.
 
 - Un **account di archiviazione** con contenitori BLOB, in cui verranno archiviati documenti non elaborati e altre raccolte di tabelle, oggetti o file.
 
-### Creare una *risorsa di Ricerca intelligenza artificiale di* Azure
+### Creare una risorsa di *Azure AI Search*
 
 1. Accedere al [portale di Azure](https://portal.azure.com/learn.docs.microsoft.com?azure-portal=true).
 
-1. Fare clic sul **pulsante + Crea una risorsa, cercare *Ricerca* intelligenza** artificiale di Azure e creare una **risorsa di Ricerca** intelligenza artificiale di Azure con le impostazioni seguenti:
+1. Fare clic sul pulsante **+ Crea una risorsa**, cercare *Azure AI Search* e creare una risorsa di **Azure AI Search** con le impostazioni seguenti:
 
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
     - **Gruppo di risorse**: *selezionare o creare un nuovo gruppo di risorse con un nome univoco*.
     - **Nome del servizio**: *un nome univoco*.
-    - **Posizione**: *scegliere una qualsiasi area disponibile*.
+    - **Località**: *scegliere un'area tra quelle disponibili. Se negli Stati Uniti orientali usare "Stati Uniti orientali 2"*.
     - **Piano tariffario**: Basic.
 
 1. Selezionare **Rivedi e crea** e, dopo aver visualizzato la risposta **Convalida completata**, selezionare **Crea**.
 
-1. Al completamento della distribuzione, selezionare **Vai alla risorsa**. Nella pagina di panoramica di Ricerca intelligenza artificiale di Azure è possibile aggiungere indici, importare dati e cercare indici creati.
+1. Al completamento della distribuzione, selezionare **Vai alla risorsa**. Nella pagina di panoramica di Azure AI Search è possibile aggiungere indici, importare dati e cercare gli indici creati.
 
 ### Creare una risorsa Servizi di Azure Ai
 
-È necessario effettuare il provisioning di una **risorsa dei servizi** di intelligenza artificiale di Azure che si trova nella stessa posizione della risorsa di Ricerca di intelligenza artificiale di Azure. La soluzione di ricerca userà questa risorsa per arricchire i dati nell'archivio dati con informazioni dettagliate generate dall'intelligenza artificiale.
+Sarà necessario effettuare il provisioning di una risorsa di **Azure AI Search** nella stessa posizione della risorsa di Azure AI Search. La soluzione di ricerca userà questa risorsa per arricchire i dati nell'archivio dati con informazioni dettagliate generate dall'intelligenza artificiale.
 
 1. Tornare alla pagina iniziale del portale di Azure. Fare clic sul pulsante **&#65291;Crea una risorsa** e cercare *Servizi di Azure Ai*. Selezionare **Crea** un piano di **Servizi di Azure AI**. Verrà visualizzata una pagina per creare una risorsa Servizi di Azure AI. Eseguire la configurazione con le seguenti impostazioni:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
-    - **Gruppo** di risorse: *lo stesso gruppo di risorse della risorsa di Ricerca di intelligenza artificiale* di Azure.
-    - **Area**: *la stessa località della risorsa di Ricerca intelligenza artificiale* di Azure.
+    - **Gruppo di risorse**: *lo stesso gruppo di risorse della risorsa di Azure AI Search*.
+    - **Area**: *la stessa posizione della risorsa di Azure AI Search*.
     - **Nome**: *un nome univoco*.
     - **Piano tariffario**: Standard S0.
     - **Selezionando questa casella, confermo di aver letto e compreso tutte le condizioni seguenti**: selezionata
@@ -65,7 +65,7 @@ La soluzione che verrà creata per Fourth Coffe richiede le risorse seguenti nel
 
 1. Cercare *account di archiviazione* e creare una risorsa **Account di archiviazione** con le impostazioni seguenti:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
-    - **Gruppo** di risorse: *lo stesso gruppo di risorse delle risorse* di Ricerca di intelligenza artificiale di Azure e dei servizi di intelligenza artificiale di Azure.
+    - **Gruppo di risorse**: *lo stesso gruppo di risorse delle risorse di Azure AI Search e dei Servizi di Azure AI*.
     - **Nome account di archiviazione**: *un nome univoco*.
     - **Posizione**: *scegliere una delle posizioni disponibili*.
     - **Prestazioni**: standard
@@ -89,7 +89,7 @@ La soluzione che verrà creata per Fourth Coffe richiede le risorse seguenti nel
     - **Livello di accesso pubblico**: Contenitore (accesso in lettura anonimo per contenitori e BLOB)
     - **Avanzate**: *nessuna modifica*.
 
-1. In una nuova scheda del browser scaricare le [recensioni di caffè compresso da `https://aka.ms/mslearn-coffee-reviews`ed estrarre i file nella *cartella delle recensioni*](https://aka.ms/mslearn-coffee-reviews).
+1. In una nuova scheda del browser scaricare [zipped coffee reviews](https://aka.ms/mslearn-coffee-reviews) da `https://aka.ms/mslearn-coffee-reviews` ed estrarre i file nella cartella *reviews*.
 
 1. Nel portale di Azure selezionare il contenitore *coffee-reviews*. Nel contenitore selezionare **Carica**.
 
@@ -105,9 +105,9 @@ La soluzione che verrà creata per Fourth Coffe richiede le risorse seguenti nel
 
 ## Indicizzare i documenti
 
-Dopo aver ottenuto i documenti in archiviazione, è possibile usare Ricerca di intelligenza artificiale di Azure per estrarre informazioni dettagliate dai documenti. Il portale di Azure fornisce una *procedura guidata Importa dati*. Grazie a questa procedura guidata è possibile creare automaticamente un indice e un indicizzatore per le origini dati supportate. Si userà la procedura guidata per creare un indice e importare i documenti di ricerca dall'archiviazione nell'indice di Ricerca di intelligenza artificiale di Azure.
+Quando i documenti sono nella risorsa di archiviazione, è possibile usare Azure AI Search per estrarre informazioni dettagliate dai documenti. Il portale di Azure fornisce una *procedura guidata Importa dati*. Grazie a questa procedura guidata è possibile creare automaticamente un indice e un indicizzatore per le origini dati supportate. Si userà la procedura guidata per creare un indice e importare i documenti di ricerca dalla risorsa di archiviazione all'indice di Azure AI Search.
 
-1. Nella portale di Azure passare alla risorsa ricerca di intelligenza artificiale di Azure. Nella pagina **Panoramica** selezionare **Importa dati**.
+1. Nel portale di Azure passare alla risorsa di Azure AI Search. Nella pagina **Panoramica** selezionare **Importa dati**.
 
     ![Screenshot che mostra la procedura guidata per l'importazione di dati.](media/create-cognitive-search-solution/azure-search-wizard-1.png)
 
@@ -183,7 +183,7 @@ Dopo aver ottenuto i documenti in archiviazione, è possibile usare Ricerca di i
     - Esegue il set di competenze cognitive per generare campi più arricchiti.
     - Esegue il mapping all'indice dei campi estratti.
 
-1. Tornare alla pagina della risorsa di Ricerca intelligenza artificiale di Azure. Nel riquadro sinistro, in **Gestione** ricerca selezionare  **Indicizzatori**. Selezionare l'indicizzatore** di caffè appena creato**. Attendere un minuto e selezionare **&orarr; Aggiorna** finché **Stato** non indica l'esito positivo.
+1. Tornare alla pagina della risorsa di Azure AI Search. Nel riquadro sinistro in **Gestione ricerca**selezionare **Indicizzatori**. Selezionare **coffee-indexer** appena creato. Attendere un minuto e selezionare **&orarr; Aggiorna** finché **Stato** non indica l'esito positivo.
 
 1. Selezionare il nome dell'indicizzatore per visualizzare altri dettagli.
 
@@ -197,11 +197,11 @@ Usare Esplora ricerche per scrivere e testare le query. Esplora ricerche è uno 
 
    ![Screenshot che mostra come trovare Esplora ricerche.](media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
 
-2. Si noti che l'indice selezionato è l'indice *coffee-index* creato. Sotto l'indice selezionato, modificare la *visualizzazione* in **visualizzazione** JSON. 
+2. Si noti che l'indice selezionato è l'indice *coffee-index* creato. Sotto l'indice selezionato, modificare la *vista* in **Visualizzazione JSON**. 
 
     ![Screenshot di Esplora ricerche.](media/create-cognitive-search-solution/search-explorer-query.png)
 
-**Nel campo Editor** di query JSON copiare e incollare: 
+Nel campo **Editor di query JSON** copiare e incollare: 
 ```json
 {
     "search": "*",
@@ -210,23 +210,23 @@ Usare Esplora ricerche per scrivere e testare le query. Esplora ricerche è uno 
 ```
 3. Seleziona **Cerca**. La query di ricerca restituisce tutti i documenti nell'indice di ricerca, incluso un conteggio di tutti i documenti nel campo **@odata.count**. L'indice di ricerca dovrebbe restituire un documento JSON contenente i risultati della ricerca.
 
-4. È il momento di applicare un filtro in base alla località. **Nel campo Editor** di query JSON copiare e incollare: 
+4. È il momento di applicare un filtro in base alla località. Nel campo **Editor di query JSON** copiare e incollare: 
 ```json
 {
     "search": "locations:'Chicago'",
     "count": true
 }
 ```
-5. Seleziona **Cerca**. La query cerca tutti i documenti nell'indice e filtra le recensioni con località Chicago. Nel campo dovrebbe essere visualizzato `3` `@odata.count` .
+5. Seleziona **Cerca**. La query cerca tutti i documenti nell'indice e filtra le recensioni con località Chicago. `3` dovrebbe essere visualizzato nel campo `@odata.count`.
 
-6. È il momento di applicare un filtro in base al sentiment. **Nel campo Editor** di query JSON copiare e incollare: 
+6. È il momento di applicare un filtro in base al sentiment. Nel campo **Editor di query JSON** copiare e incollare: 
 ```json
 {
     "search": "sentiment:'negative'",
     "count": true
 }
 ```
-7. Seleziona **Cerca**. La query cerca tutti i documenti nell'indice e filtra le recensioni con sentiment negativo. Nel campo dovrebbe essere visualizzato `1` `@odata.count` .
+7. Seleziona **Cerca**. La query cerca tutti i documenti nell'indice e filtra le recensioni con sentiment negativo. `1` dovrebbe essere visualizzato nel campo `@odata.count`.
 
    > **Nota:** notare come i risultati vengono ordinati in base a `@search.score`. Questo è il punteggio assegnato dal motore di ricerca per visualizzare il livello di corrispondenza dei risultati rispetto alla query specificata.
 
@@ -270,4 +270,4 @@ Usare Esplora ricerche per scrivere e testare le query. Esplora ricerche è uno 
 
 ## Altre informazioni
 
-Questo semplice indice di ricerca solo alcune delle funzionalità del servizio di ricerca di intelligenza artificiale di Azure. Per altre informazioni sulle operazioni che è possibile eseguire con questo servizio, vedere la pagina[ servizio di ricerca di ](https://learn.microsoft.com/azure/search)Intelligenza artificiale di Azure.
+Questo semplice indice di ricerca rappresenta solo alcune delle funzionalità di Azure AI Search. Per altre informazioni su cosa è possibile fare con questo servizio, vedere la [pagina del servizio Azure AI Search](https://learn.microsoft.com/azure/search).

@@ -20,7 +20,7 @@ In questo esercizio si userà Language Studio per creare e testare un progetto c
 1. Nella pagina **Crea lingua** configurarla con le impostazioni seguenti:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
     - **Gruppo di risorse**: *selezionare o creare un nuovo gruppo di risorse con un nome univoco*.
-    - **Area**: Stati Uniti orientali.
+    - **Area**: *selezionare l'area geografica più vicina. Se negli Stati Uniti orientali usare "Stati Uniti orientali 2".*
     - **Nome**: *immettere un nome univoco*.
     - **Piano tariffario**: *F0 o S gratuito se F0 gratuito non è disponibile*
     - **Selezionando questa casella si riconosce che ho letto e compreso tutti i termini seguenti**: *Selezionato*.

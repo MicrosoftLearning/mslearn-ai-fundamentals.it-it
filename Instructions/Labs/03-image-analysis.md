@@ -18,14 +18,14 @@ In questo esercizio si userà Vision Studio per analizzare le immagini usando le
 1. Fare clic sul pulsante **&#65291;Crea una risorsa** e cercare *Servizi di Azure Ai*. Selezionare **Crea** un piano di **Servizi di Azure AI**. Verrà visualizzata una pagina per creare una risorsa Servizi di Azure AI. Eseguire la configurazione con le seguenti impostazioni:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
     - **Gruppo di risorse**: *selezionare o creare un nuovo gruppo di risorse con un nome univoco*.
-    - **Area**: Stati Uniti orientali.
+    - **Area**: *selezionare l'area geografica più vicina. Se negli Stati Uniti orientali usare "Stati Uniti orientali 2".*
     - **Nome**: *immettere un nome univoco*.
     - **Piano tariffario**: *Standard S0.*
     - **Selezionando questa casella si riconosce che ho letto e compreso tutti i termini seguenti**: *Selezionato*.
 
 1. Selezionare **Rivedi e crea** e quindi **Crea** e attendere il completamento della distribuzione.
 
-## Connessione la risorsa del servizio azure per intelligenza artificiale in Vision Studio
+## Connettere la risorsa del servizio Intelligenza artificiale di Azure a Vision Studio
 
 Connettere quindi la risorsa del servizio Di intelligenza artificiale di Azure di cui è stato effettuato il provisioning in precedenza a Vision Studio.
 
@@ -45,17 +45,17 @@ Connettere quindi la risorsa del servizio Di intelligenza artificiale di Azure d
 
 1. Chiudere la pagina delle impostazioni selezionando "x" in alto a destra nella schermata.
 
-## Generare didascalia per un'immagine
+## Generare didascalie per un'immagine
 
 A questo punto è possibile usare Vision Studio per analizzare le immagini scattate da una fotocamera nel *negozio Northwind Traders* .
 
-Si esaminerà ora l'immagine didascalia funzionalità di Visione artificiale di Azure. Le didascalia di immagini sono disponibili tramite le **funzionalità Caption e **Dense Captions****.
+Si esaminerà ora la funzionalità di didascalia delle immagini di Visione artificiale di Azure. Le didascalie delle immagini sono disponibili tramite le **funzionalità Caption e **Dense Captions****.
 
 1. In un Web browser passare a [Vision Studio](https://portal.vision.cognitive.azure.com?azure-portal=true).
 
-1. Nella **pagina di destinazione Introduzione a Visione** artificiale selezionare la **scheda Analisi** immagini e quindi selezionare il **riquadro Aggiungi didascalia alle immagini**.
+1. Nella **pagina di destinazione Introduzione a Visione** artificiale selezionare la **scheda Analisi** immagini e quindi selezionare il **riquadro Aggiungi didascalie alle immagini** .
 
-    ![Nella home page di Vision Studio la scheda Analisi immagini è selezionata ed evidenziata. Il riquadro Aggiungi didascalia alle immagini è evidenziato.](./media/analyze-images-vision/add-captions.png)
+    ![Nella home page di Vision Studio la scheda Analisi immagini è selezionata ed evidenziata. Il riquadro Aggiungi didascalie alle immagini è evidenziato.](./media/analyze-images-vision/add-captions.png)
 
 1. **Nella sottotitolo Prova in uscita** confermare i criteri di utilizzo delle risorse leggendo e selezionando la casella.  
 
@@ -65,19 +65,19 @@ Si esaminerà ora l'immagine didascalia funzionalità di Visione artificiale di 
 
 1. Caricare l'immagine **store-camera-1.jpg** trascinandola nella **casella Trascinare i file qui** o passando al file system.
 
-1. Osservare il testo generato didascalia, visibile nel **pannello Attributi** rilevati a destra dell'immagine.
+1. Osservare il testo della didascalia generato, visibile nel **pannello Attributi** rilevati a destra dell'immagine.
 
     La **funzionalità Caption** fornisce una singola frase in inglese leggibile e leggibile che descrive il contenuto dell'immagine.
 
-1. Successivamente, usare la stessa immagine per eseguire **didascalia** dense. Tornare alla **home page di Vision Studio** e, come in precedenza, selezionare la **scheda Analisi** immagini e quindi selezionare il **riquadro Dense didascalia ing**.
+1. Successivamente, usare la stessa immagine per eseguire **la didascalia** dense. Tornare alla home page di **Vision Studio** e, come in precedenza, selezionare la **scheda Analisi** immagini e quindi selezionare il **riquadro Didascalia** densa.
 
-    La **funzionalità Dense Captions** differisce dalla **funzionalità Caption** in quanto fornisce più didascalia leggibili per un'immagine, una che descrive il contenuto dell'immagine e altre, ognuna che copre gli oggetti essenziali rilevati nell'immagine. Ogni oggetto rilevato include un rettangolo di selezione, che definisce le coordinate pixel all'interno dell'immagine associata all'oggetto.
+    La **funzionalità Dense Captions** differisce dalla **funzionalità Caption in quanto fornisce più didascalie** leggibili per un'immagine, una che descrive il contenuto dell'immagine e altre, ognuna che copre gli oggetti essenziali rilevati nell'immagine. Ogni oggetto rilevato include un rettangolo di selezione, che definisce le coordinate pixel all'interno dell'immagine associata all'oggetto.
 
-1. Passare il puntatore del mouse su uno dei didascalia nell'elenco **Attributi rilevati** e osservare cosa accade all'interno dell'immagine.
+1. Passare il puntatore del mouse su una delle didascalie nell'elenco **Attributi rilevati** e osservare cosa accade all'interno dell'immagine.
 
-    ![Vengono visualizzate l'immagine e i relativi didascalia.](./media/analyze-images-vision/dense-captioning.png)
+    ![Vengono visualizzate l'immagine e le relative didascalie.](./media/analyze-images-vision/dense-captioning.png)
 
-    Spostare il cursore del mouse sulle altre didascalia nell'elenco e osservare come il rettangolo di delimitazione viene spostato nell'immagine per evidenziare la parte dell'immagine usata per generare il didascalia.
+    Spostare il cursore del mouse sulle altre didascalie nell'elenco e osservare come il rettangolo di selezione viene spostato nell'immagine per evidenziare la parte dell'immagine usata per generare la didascalia.
 
 ## Assegnazione di tag alle immagini
 

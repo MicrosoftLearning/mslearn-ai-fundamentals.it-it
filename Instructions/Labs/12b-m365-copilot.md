@@ -1,0 +1,186 @@
+---
+lab:
+  title: Esplorare Copilot per Microsoft 365
+---
+# Esplorare Copilot per Microsoft 365
+
+In questo esercizio si esamineranno alcuni dei modi in cui Microsoft Copilot può usare l'intelligenza artificiale generativa per migliorare la produttività durante la creazione di nuovi contenuti. Nello scenario per questo esercizio si inizierà con alcune note di alto livello per un'idea aziendale e si userà Copilot per Microsoft 365 in più app, ad esempio Word, PowerPoint ed Excel, per aiutare a sviluppare un piano aziendale e una presentazione per potenziali investitori.
+
+Il completamento di questo esercizio richiede circa **40** minuti.
+
+> **Nota**: questo esercizio richiede una **licenza di Copilot per Microsoft 365** dall'organizzazione.
+
+## Usare Copilot per esplorare un documento e cercare un'idea
+
+Per iniziare l'esplorazione dell'intelligenza artificiale generativa, si userà Copilot per Word per esaminare un documento esistente ed estrarre alcune informazioni dettagliate.
+
+1. Nel Web browser aprire il documento [Business Idea.docx](https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx) all'indirizzo `https://github.com/MicrosoftLearning/mslearn-ai-fundamentals/raw/main/data/generative-ai/Business%20Idea.docx`. 
+1. Selezionare **Scarica** per salvare il file nella cartella Download** del **PC.
+1. **Spostare** o **copiare e incollare** il documento appena scaricato nella **cartella di OneDrive** .
+1. **Dalla cartella OneDrive** aprire **Business Idea.docx** in Microsoft Word (chiudendo eventuali messaggi di benvenuto o notifiche di nuove funzionalità) ed esaminare il documento, che descrive alcune idee di alto livello per un'attività di pulizia a New York City. Se richiesto, selezionare **Abilita modifica** nella parte superiore.
+1. Trovare e selezionare l'icona **Copilot** sulla barra degli strumenti di Word per aprire il riquadro Copilot, come illustrato di seguito (il tema visivo può variare):
+
+    ![Screenshot del riquadro Copilot in Microsoft Word.](./media/generative-ai/copilot-word-pane.png)
+
+1. Nel riquadro Copilot immettere il prompt seguente nell'area di testo nella parte inferiore:
+
+    ```
+    What is this document about?
+    ```
+
+1. Esaminare la risposta di Copilot, che dovrebbe riepilogare i punti principali del documento, come illustrato di seguito:
+
+    ![Screenshot del riquadro Copilot in Word con una risposta.](./media/generative-ai/copilot-response-word.png)
+
+    > La risposta specifica ricevuta può variare a causa della natura dell'IA generativa.
+
+1. Tornare al riquadro Copilot per porre a Copilot la domanda seguente:
+
+    ```
+    How do I setup a new business in New York?
+    ```
+
+1. Esaminare la risposta e seguire le domande aggiuntive in base alle esigenze. Quando si è soddisfatti della risposta, usare l'icona **Copia** (&#128461;) sotto la risposta per copiarla negli Appunti. Incollarlo nel documento di Word, selezionare tutto il testo e quindi selezionare l'icona Copilot per visualizzare il testo come tabella.
+
+    ![Screenshot che chiede a Copilot di visualizzare in un formato di tabella.](./media/generative-ai/copilot-rewrite-as-table.png)
+
+1. Esaminare la tabella e chiedere a Copilot di aggiungere altre informazioni, ad esempio i riferimenti per altri dettagli.  La risposta dovrebbe essere simile alla seguente (potrebbe essere necessario usare il **pulsante Rigenera** ):
+
+    ![Screenshot della risposta di Copilot in un formato di tabella.](./media/generative-ai/copilot-rewrite-as-table-response.png)
+
+    > **Importante**: la risposta generata dall'intelligenza artificiale si basa su informazioni pubblicamente sul Web. Anche se può essere utile aiutare a comprendere i passaggi necessari per configurare un'azienda, non è garantito che sia accurato al 100% e non sostituisce la necessità di consigli professionali!
+
+1. Quando si è soddisfatti della tabella generata da Copilot, selezionare l'opzione **Mantieni**.
+
+## Usare Copilot per creare contenuti per un piano aziendale
+
+Ora che hai fatto alcune ricerche iniziali, copilot ti aiuterà a sviluppare un piano aziendale per la tua azienda di pulizia.
+
+1. Con il **documento Business Idea.docx** ancora aperto, nel riquadro Copilot immettere il prompt seguente:
+
+    ```
+    Can you suggest a name for my cleaning business?
+    ```
+
+1. Esaminare i suggerimenti e selezionare un nome per la società di pulizia (o continuare a chiedere di trovare un nome desiderato).
+1. Nel documento di Word selezionare l'icona Copilot nel margine per creare nuovi contenuti. Immettere il prompt seguente, sostituendo **Contoso Cleaning** con il nome della società desiderato:
+
+    ```
+    Write a business plan for "Contoso Cleaning" based on the information in this document. Include an executive summary, market overview, and financial projections.
+    ```
+
+    ![Screenshot della creazione di un piano aziendale da parte di Copilot.](./media/generative-ai/copilot-draft-business-plan-prompt.png)
+
+1. Esaminare la risposta bozza da Copilot e mantenerla, regolare il tono, la lunghezza o chiedere a Copilot di riscriverla con un nuovo prompt. Applicare intestazioni e stili appropriati al documento per renderlo professionale. La risposta dovrebbe essere simile alla seguente:
+
+    ![Screenshot di un documento di Word con un piano aziendale generato da Copilot.](./media/generative-ai/copilot-draft-business-plan-response.png)
+
+1. Se le proiezioni finanziarie nel piano aziendale non sono formattate come tabella, selezionarla e usare Copilot per visualizzare le proiezioni come tabella.
+1. Selezionare la tabella delle proiezioni finanziarie e copiarla negli Appunti.
+1. Salvare il documento di Word.
+
+## Visualizzare le proiezioni finanziarie in Copilot per Excel
+
+Con un piano aziendale in mano, prendiamo alcuni di questi dati sulle proiezioni finanziarie e chiediamo a Copilot in Excel di visualizzare i dati per noi, in modo da poterli includere in e-mail o presentazioni agli investitori.
+
+1. Nel PC con le app di Microsoft 365 installate aprire **Excel** e creare una nuova cartella di lavoro vuota. Salvare immediatamente la cartella di lavoro come **Financial Projetions.xlsx** in OneDrive o Copilot non funzionerà.
+1. Incollare la tabella della proiezione delle vendite da **Business Idea.docx** nel foglio di calcolo di Excel e **formattarla come tabella**. A questo scopo, è necessario:
+    1. Selezionare una **cella** all'interno dei dati.
+    1. Selezionare **Home e scegliere **Formato come tabella** in** Stili. 
+    1. Scegliere uno stile per la tabella.
+    1. Nella **finestra di dialogo Crea tabella** confermare o impostare l'intervallo di celle.
+    1. Contrassegnare se la tabella contiene intestazioni e selezionare **OK**.
+1. Con le proiezioni di vendita formattate come tabella, aprire il riquadro Copilot dalla barra multifunzione di Excel e immettere il prompt seguente:
+
+    ```
+    Suggest ways to visualize these financial projections.
+    ```
+    
+1. Copilot dovrebbe suggerire 1 o 2 modi per visualizzare i dati e offrire l'aggiunta di un grafico pivot a un nuovo foglio.
+
+    ![Screenshot di Copilot in Excel che visualizza le proiezioni finanziarie.](./media/generative-ai/copilot-excel-visualize-projections.png)
+
+1. Tuttavia, potrebbe essere necessario visualizzare altri dati nel grafico per visualizzare le modifiche dell'anno oltre l'anno, quindi immettere il prompt seguente per aggiungere altre informazioni:
+
+    ```
+    Visualize these financial projections in a line chart to show year-over-year revenue and profits.
+    ```
+
+    ![Screenshot di Copilot in Excel che visualizza le proiezioni finanziarie.](./media/generative-ai/copilot-excel-visualize-more.png)
+
+1. Aggiungere il grafico pivot a un nuovo foglio e aprirlo. Selezionare il grafico e quindi selezionare **Progetta** per applicare gli stili, modificare il tipo di grafico e altre azioni. Alla fine, si dovrebbe avere qualcosa di simile al seguente:
+
+    ![Screenshot di Copilot in Excel con l'aggiunta di un grafico pivot.](./media/generative-ai/copilot-excel-chart-design.png)
+
+1. Salvare il file in OneDrive e chiudere Excel.
+
+Sono stati appena usati i dati creati da Copilot in Word per visualizzarli in Excel. Nell'esercizio successivo si passerà all'uso di Copilot in Outlook per comporre e inviare messaggi di posta elettronica sul lavoro svolto.
+
+## Usare Copilot per comporre un messaggio di posta elettronica
+
+Sono stati creati alcuni elementi collaterali che consentono di iniziare la propria attività. Ora è il momento di contattare un investitore alla ricerca di alcuni finanziamenti di avvio.
+
+1. Nel PC con le app di Microsoft 365 installate aprire **Outlook**. Se Outlook non è stato configurato con l'account Microsoft 365, vedere [Configurare e usare Outlook - supporto tecnico Microsoft](https://support.microsoft.com/office/set-up-and-use-outlook-4636f361-d5e3-4a87-9cd4-382858de55fa).
+1. Attivare la **nuova esperienza di Outlook** . Per ottenere le funzionalità di Copilot più recenti in Outlook, è consigliabile usare l'esperienza "Nuovo Outlook". Per visualizzare la versione in uso, vedere [Quale versione di Outlook è disponibile? - supporto tecnico Microsoft](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c).
+1. Creare un nuovo messaggio di posta elettronica e compilare la **casella A** con il proprio indirizzo di posta elettronica.
+1. È possibile iniziare a scrivere il messaggio di posta elettronica dal riquadro Copilot o direttamente dal corpo del messaggio di posta elettronica:
+
+    ![Screenshot di Outlook e delle opzioni per la bozza di un messaggio di posta elettronica con Copilot.](./media/generative-ai/copilot-draft-email-outlook.png)
+    
+1. Immettere il prompt seguente e modificare il tono su "Formale" e la lunghezza su "Medium":
+
+    ```
+    Request a meeting with an investment bank to discuss funding for a commercial cleaning business.
+    ```
+
+    ![Screenshot della stesura di un messaggio di posta elettronica con Copilot in Outlook.](./media/generative-ai/copilot-draft-email-adjust-tone-outlook.png)
+
+1. Selezionare **Genera bozza** ed esaminare l'output generato. Modificare il tono o indicare a Copilot cosa si vuole modificare sul messaggio di posta elettronica.
+
+    ![Screenshot del messaggio di posta elettronica generato con Copilot in Outlook.](./media/generative-ai/copilot-draft-email-results-outlook.png)
+
+1. Se lo desideri, puoi inviare il messaggio di posta elettronica a te stesso.
+
+## Usare Copilot per creare contenuto per una presentazione
+
+Con l'aiuto di Copilot, hai creato una bozza di un piano aziendale per l'idea aziendale di pulizia, preparato alcune proiezioni finanziarie e inviato un messaggio di posta elettronica per richiedere una riunione con un potenziale investitore. A questo punto è necessaria una presentazione efficace per comunicare i vantaggi dell'azienda.
+
+1. Aprire **PowerPoint** e creare una nuova **presentazione** vuota. Se il **riquadro Di progettazione** viene aperto automaticamente, chiuderlo.
+
+    ![Screenshot della creazione di una nuova presentazione vuota in PowerPoint.](./media/generative-ai/powerpoint-create-blank-presentation.png)
+
+1. Salvare la presentazione come **Pulizia Company.pptx** nella cartella di OneDrive.
+1. Selezionare il **pulsante** Copilot nella **scheda** Home della barra multifunzione, selezionare **Crea presentazione su...**, quindi completare la richiesta nel riquadro Copilot come indicato di seguito:
+
+    ```
+    Create a presentation about a corporate cleaning service in New York City.
+    ```
+
+1. Copilot genererà diapositive nella presentazione.  Il processo potrebbe richiedere alcuni minuti e l'output dovrebbe avere un aspetto simile al seguente con un tema diverso:
+
+    ![Screenshot della presentazione di PowerPoint creata da Copilot da un documento di Word.](./media/generative-ai/copilot-powerpoint-create-image.png)
+
+1. Selezionare la seconda diapositiva della presentazione. Quindi, nel riquadro Copilot, chiedere di aggiungere una nuova diapositiva usando questo prompt:
+
+    ```
+    Add a slide that describes the benefits of an eco-friendly approach to cleaning. 
+    ```
+
+    ![Screenshot della presentazione di PowerPoint per creare una nuova diapositiva.](./media/generative-ai/copilot-powerpoint-add-new-slide.png)
+
+1. Salvare la presentazione.
+
+## Esercizio
+
+Ora hai visto come usare Copilot per Microsoft 365 in un paio di app diverse per cercare idee e generare contenuti, perché non provare a esplorare ulteriormente? Provare a usare Copilot per pianificare un evento per promuovere l'alfabetizzazione dei bambini in una biblioteca locale. Alcuni aspetti che è possibile provare includono:
+
+- Ricerca alcuni suggerimenti per incoraggiare i bambini a leggere in età precoce.
+- Creare un volantino o un poster per l'evento.
+- Comporre un messaggio di posta elettronica per una campagna per invitare gli autori di bambini locali a venire e parlare all'evento.
+- Creare una presentazione per avviare l'evento.
+
+Sii così inventiva come ti piace e scopri come Copilot può aiutarti a trovare informazioni, generare e perfezionare il testo, creare immagini e rispondere a domande.
+
+## Conclusione
+
+In questo esercizio è stato usato [Copilot per Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise/copilot-for-microsoft-365) per trovare informazioni e generare contenuto. Speriamo di aver visto come usare l'IA generativa in un copilota può contribuire alla produttività e alla creatività. Microsoft 365 consente di portare la potenza dell'intelligenza artificiale generativa ai dati e ai processi aziendali, integrando al tempo stesso nell'infrastruttura IT esistente per garantire una soluzione gestibile e sicura.
