@@ -38,7 +38,7 @@ Prima di usare la piattaforma, è necessario associare una risorsa Servizi di Az
 3. Nella pagina *Crea sicurezza dei contenuti* nel [portale di Azure](https://portal.azure.com?azure-portal=true) è necessario configurare diversi dettagli per creare la risorsa. Eseguire la configurazione con le seguenti impostazioni:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
     - **Gruppo di risorse**: *selezionare o creare un nuovo gruppo di risorse con un nome univoco*.
-    - **Area**: *scegliere qualsiasi area disponibile. Se negli Stati Uniti orientali usare "Stati Uniti orientali 2".*
+    - **Area**: *scegliere un'area tra quelle disponibili. Se negli Stati Uniti orientali usare "Stati Uniti orientali 2"*.
     - **Nome**: *immettere un nome univoco*.
     - **Piano tariffario**: gratuito F0.
 
