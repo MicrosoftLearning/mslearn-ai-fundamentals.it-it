@@ -9,6 +9,8 @@ In questo esercizio si userà la funzionalità di Machine Learning automatizzata
 
 Il completamento di questo esercizio richiederà circa **30** minuti.
 
+>**Importante** Al momento è possibile creare e distribuire un modello come servizio Web in Azure Machine Learning Studio, ma non testarlo in Studio. Pertanto, è possibile completare tutte le sezioni di passi tranne l’ultima prima della pulizia. L'aggiornamento verrà apportato mano a mano che verranno apportate le modifiche.
+
 ## Creare un'area di lavoro di Azure Machine Learning
 
 Per usare Azure Machine Learning, è necessario effettuare il provisioning di un'area di lavoro Azure Machine Learning nella sottoscrizione di Azure. Sarà quindi possibile usare studio di Azure Machine Learning per usare le risorse nell'area di lavoro.
@@ -74,7 +76,7 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
             - Includi tutte le colonne diverse da **Path**
             - Rivedi i tipi rilevati automaticamente
 
-        Seleziona **Crea**. Dopo aver creato il set di dati, selezionare il **set di dati bike-rentals** per continuare a inviare il processo di Machine Learning automatizzato.
+        Seleziona **Crea**. Dopo aver creato il set di dati, selezionare il set di dati **bike-rentals** per continuare a inviare il processo di ML automatizzato.
 
     **Impostazioni attività**:
 
@@ -90,9 +92,9 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
         - **Numero massimo di prove**: 3
         - **Numero massimo di prove simultanee**: 3
         - **Numero massimo di nodi**: 3
-        - **Soglia del punteggio** della metrica: 0,085 (*in modo che se un modello ottiene un punteggio di metrica di errore quadratico medio normalizzato pari o inferiore a 0,085, il processo termina.*
+        - **Soglia di punteggio metrica**: 0,085 (*in questo modo, se un modello raggiunge un punteggio della metrica Radice errore quadratico medio di 0,085 o inferiore, il processo termina.*)
         - **Timeout**: 15
-        - **Timeout** di iterazione: 15
+        - **Timeout iterazione**: 15
         - **Abilitare la terminazione anticipata**: *selezionata*
     - **Convalida e test:**
         - **Tipo di convalida**: suddivisione tra training e convalida
@@ -104,10 +106,10 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
     - **Selezionare il tipo di elaborazione**: serverless
     - **Tipo di macchina virtuale**: CPU
     - **Livello macchina virtuale**: dedicato
-    - **Dimensioni macchina** virtuale: Standard_DS3_V2\*
+    - **Dimensioni macchina virtuale**: Standard_DS3_V2\*
     - **Numero di istanze**: 1
 
-    \**Se la sottoscrizione limita le dimensioni delle macchine virtuali disponibili, scegliere le dimensioni disponibili.*
+    \* *Se la sottoscrizione in uso limita le dimensioni VM disponibili, scegliere qualunque dimensione disponibile.*
 
 1. Inviare il processo di training. Viene avviato automaticamente.
 
@@ -140,6 +142,8 @@ Al termine del processo di Machine Learning automatizzato, è possibile esaminar
 1. Attendere che lo **Stato di distribuzione** cambi in *Completato*. L'operazione potrebbe richiedere da 5 a 10 minuti.
 
 ## Testare il servizio distribuito
+
+>**Importante** Attualmente Azure Machine Learning Studio non supporta il tipo di creazione del set di dati necessario per usare i test di distribuzione. Forniremo un aggiorneremo quando sarà disponibile una risoluzione. 
 
 A questo punto è possibile testare il servizio distribuito.
 
