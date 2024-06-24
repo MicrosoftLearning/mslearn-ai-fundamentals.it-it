@@ -124,7 +124,7 @@ Quando i documenti sono nella risorsa di archiviazione, è possibile usare Azure
 
 1. Selezionare **Avanti: Aggiungi competenze cognitive (facoltativo)**.
 
-1. Nella sezione **Collega Servizi cognitivi** selezionare la risorsa Servizi di Azure AI.  
+1. Nella sezione **Collega Servizi di IA**, selezionare la risorsa di Servizi di Azure AI.  
 
 1. Nella sezione **Aggiungi arricchimenti**:
     - Modificare il **Nome del set di competenze** in **coffee-skillset**.
@@ -152,11 +152,12 @@ Quando i documenti sono nella risorsa di archiviazione, è possibile usare Azure
     - Dettagli immagine
     - Riferimenti alle immagini
 
-    > **Nota:** viene visualizzato un avviso che richiede una **stringa di connessione dell'account di archiviazione**.
+    > **Nota** Viene visualizzato un avviso che richiede una **stringa di connessione a account di archiviazione**.
     >
     > ![Screenshot che mostra un avviso nella schermata di connessione dell'account di archiviazione con l'opzione "Scegli una connessione esistente" selezionata.](media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
     >
-    > 1. Selezionare **Scegliere una connessione esistente**. Scegliere l'account di archiviazione creato in precedenza.
+
+1. Selezionare **Scegliere una connessione esistente**. Scegliere l'account di archiviazione creato in precedenza.
     > 1. Fare clic su **+ Contenitore** per creare un nuovo contenitore denominato** knowledge-store** con il livello di privacy impostato su **Privato** e quindi selezionare **Crea**.
     > 1. Selezionare il contenitore **knowledge-store** e quindi fare clic su **Seleziona** nella parte inferiore della schermata.
 
@@ -166,7 +167,7 @@ Quando i documenti sono nella risorsa di archiviazione, è possibile usare Azure
 
 1. Assicurarsi che l'opzione **Chiave** sia impostata su **metadata_storage_path**. Lasciare vuoto **Nome dello strumento suggerimenti** e lasciare **Modalità di ricerca** popolata automaticamente.
 
-1. Esaminare le impostazioni predefinite dei campi dell'indice. Selezionare **Filtrabile** per tutti i campi già selezionati per impostazione predefinita.
+1. Esaminare le impostazioni predefinite dei campi dell'indice. Selezionare **Filtrabile** per tutti i campi già selezionati per impostazione predefinita. I nomi dei campi che devono essere contrassegnati *filtrabili* includono: contenuto, posizioni, keyphrase, valutazione, merged_content, text, layoutText, imageTags, imageCaption.
 
     ![Screenshot che mostra il riquadro Indice personalizzato con il nome dell'indice già inserito e il parametro "Filtrabile" selezionato per un campo di indice predefinito.](media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)
 
@@ -238,11 +239,11 @@ Nel campo **Editor di query JSON** copiare e incollare:
 
 1. Nel portale di Azure tornare all'account di archiviazione di Azure.
 
-2. Nel riquadro del menu a sinistra selezionare **Contenitori**. Selezionare il contenitore **knowledge-store**.
+2. Nel riquadro del menu a sinistra selezionare **Contenitori**. Selezionare il contenitore **knowledge-store**. 
 
     ![Screenshot del contenitore knowledge-store.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
 
-3. Selezionare uno degli elementi e quindi fare clic sul file **objectprojection.json**.
+3. Verrà visualizzato un elenco di cartelle. Esiste una cartella per tutti i metadati per ogni documento di revisione. **Selezionare una delle cartelle**. Nella cartella, fare clic sul file **objectprojection.json**.
 
     ![Screenshot di objectprojection.json.](media/create-cognitive-search-solution/knowledge-store-blob-1.png)
 
