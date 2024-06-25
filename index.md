@@ -1,5 +1,5 @@
 ---
-title: Esercitazioni di Microsoft Learn - Nozioni fondamentali sull'intelligenza artificiale di Azure
+title: Esercitazioni di Microsoft Learn - Nozioni fondamentali su Azure per intelligenza artificiale
 permalink: index.html
 layout: home
 ---

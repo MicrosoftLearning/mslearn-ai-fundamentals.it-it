@@ -29,28 +29,56 @@ Prima di usare la piattaforma, è necessario associare una risorsa Servizi di Az
 
 ![Screenshot dell'icona delle impostazioni in alto a destra della schermata, accanto alle icone della campana, del punto interrogativo e dello smile.](./media/content-safety/settings-toggle.png)
 
-1. Nella pagina **Impostazioni** verranno visualizzate una scheda *Directory* e una scheda *Risorsa*. Nella scheda *Risorsa*, selezionare **Crea una nuova risorsa**. Si aprirà la pagina per creare una risorsa nel portale di Azure.
+2. Nella pagina **Impostazioni** verranno visualizzate una scheda *Directory* e una scheda *Risorsa*. Nella scheda *Risorsa*, selezionare **Crea una nuova risorsa**. Si aprirà la pagina per creare una risorsa nel portale di Azure.
 
 > **Nota:** la scheda *Directory* consente agli utenti di selezionare directory diverse da cui creare risorse. Non è necessario modificarne le impostazioni, a meno che non si voglia usare una directory diversa. 
 
 ![Screenshot di dove selezionare la voce Crea una nuova risorsa dalla pagina delle impostazioni di Content Safety Studio.](./media/content-safety/create-new-resource-from-studio.png)
 
-1. Nella pagina *Crea sicurezza dei contenuti* nel [portale di Azure](https://portal.azure.com?auzre-portal=true) è necessario configurare diversi dettagli per creare la risorsa. Eseguire la configurazione con le seguenti impostazioni:
+3. Nella pagina *Crea sicurezza dei contenuti* nel [portale di Azure](https://portal.azure.com?azure-portal=true) è necessario configurare diversi dettagli per creare la risorsa. Eseguire la configurazione con le seguenti impostazioni:
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
     - **Gruppo di risorse**: *selezionare o creare un nuovo gruppo di risorse con un nome univoco*.
-    - **Area**: *scegliere una qualsiasi area disponibile*.
+    - **Area**: *scegliere un'area tra quelle disponibili. Se negli Stati Uniti orientali usare "Stati Uniti orientali 2"*.
     - **Nome**: *immettere un nome univoco*.
     - **Piano tariffario**: gratuito F0.
 
-1. Selezionare **Rivedi e crea** per rivedere la configurazione. Selezionare **Crea**. La schermata indicherà quando la distribuzione è stata completata. 
+4. Selezionare **Rivedi e crea** per rivedere la configurazione. Selezionare **Crea**. La schermata indicherà quando la distribuzione è stata completata. 
 
 *Congratulazioni! È stata appena creata una risorsa Servizi di Azure AI o ne è stato effettuato il provisioning. Quella di cui è stato effettuato il provisioning in particolare è una risorsa del servizio Sicurezza dei contenuti a servizio singolo.*
 
-1. Una volta completata la distribuzione, aprire una nuova scheda e tornare a [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
+5. Una volta completata la distribuzione, aprire una nuova scheda e tornare a [Content Safety Studio](https://contentsafety.cognitive.azure.com?azure-portal=true). 
 
-1. Selezionare nuovamente l'icona delle **impostazioni** in alto a destra della schermata. La risorsa appena creata dovrebbe essere stata aggiunta all'elenco.  
+6. Selezionare nuovamente l'icona delle **impostazioni** in alto a destra della schermata. La risorsa appena creata dovrebbe essere stata aggiunta all'elenco.  
 
-1. Nella pagina delle impostazioni di Content Safety Studio, selezionare la risorsa del Servizio di Azure AI appena creata e fare clic su **Usa risorsa** nella parte inferiore della schermata. Si tornerà così alla pagina iniziale della piattaforma. Ora è possibile iniziare a usare la piattaforma con la risorsa appena creata.
+>**Nota**: Se si usa un abbonamento a Cloud Slice, è possibile ignorare i passaggi 7-12 e andare al passaggio 13. In caso negativo, continuare con il passaggio 7.
+
+7. Selezionare **Visualizza tutte le proprietà nel portale di Azure** nella parte inferiore della schermata *Impostazioni*. 
+
+![Screenshot della visualizzazione di tutte le proprietà nel collegamento del portale di Azure.](./media/content-safety/view-all-properties.png)
+
+8. Nel portale di Azure selezionare la risorsa *Content Safety* appena creata. Nel riquadro a sinistra selezionare quindi **Controllo di accesso (IAM)**. Nel riquadro aperto selezionare quindi **Aggiungi** accanto al segno più e selezionare **Aggiungi assegnazione di ruolo**. 
+
+![Screenshot della posizione in cui selezionare Aggiungi assegnazione di ruolo nel riquadro Controllo di accesso.](./media/content-safety/access-control-step-one.png)
+
+9. Cercare **utente di servizi cognitivi** nell'elenco dei ruoli e selezionarlo. Quindi seleziona **Avanti**. 
+
+10. Usare le impostazioni seguenti per assegnare se stessi al ruolo: 
+    - **Assegnare l'accesso a**: selezionare *utente, gruppo o entità servizio*
+    - **Membri**: fare clic su *selezionare membri*
+        - Nel riquadro aperto *Selezionare i membri*, trovare il proprio nome. Fare clic sull'icona con il segno più accanto al nome. Fare clic su **Seleziona**.
+    - **Descrizione**: *lasciare vuoto*
+
+11. Selezionare **Rivedi e assegna**, quindi selezionare di nuovo **Rivedi e assegna** per aggiungere l'assegnazione di ruolo.    
+
+12. Tornare a Content Safety Studio in [https://contentsafety.cognitive.azure.com](https://contentsafety.cognitive.azure.com). Selezionare l'icona **Impostazioni** nella parte superiore destra della schermata. 
+
+![Screenshot dell'icona delle impostazioni in alto a destra della schermata, accanto alle icone della campana, del punto interrogativo e dello smile.](./media/content-safety/settings-toggle.png)
+ 
+13. Selezionare la risorsa servizio di Azure AI appena creata. Assicurarsi che in *Assegnazioni di ruolo correnti* ci siano *Utente di servizi cognitivi* e *Proprietario*.
+
+![Screenshot delle assegnazioni di ruolo correnti.](./media/content-safety/access-control-check-step.png)
+
+14. Fare clic su **Usare risorsa** nella parte inferiore della schermata. Si tornerà così alla pagina iniziale della piattaforma. Ora è possibile iniziare a usare la piattaforma con la risorsa appena creata.
 
 ## Provare la moderazione testo in Content Safety Studio
 
