@@ -9,8 +9,6 @@ In questo esercizio si userà la funzionalità di Machine Learning automatizzata
 
 Il completamento di questo esercizio richiederà circa **30** minuti.
 
->**Importante** Al momento è possibile creare e distribuire un modello come servizio Web in Azure Machine Learning Studio, ma non testarlo in Studio. Pertanto, è possibile completare tutte le sezioni di passi tranne l’ultima prima della pulizia. L'aggiornamento verrà apportato mano a mano che verranno apportate le modifiche.
-
 ## Creare un'area di lavoro di Azure Machine Learning
 
 Per usare Azure Machine Learning, è necessario effettuare il provisioning di un'area di lavoro Azure Machine Learning nella sottoscrizione di Azure. Sarà quindi possibile usare studio di Azure Machine Learning per usare le risorse nell'area di lavoro.
@@ -47,8 +45,8 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
 
     **Impostazioni di base**:
 
-    - **Nome processo**: mslearn-bike-automl
-    - **Nome nuovo esperimento**: mslearn-bike-rental
+    - **Nome processo**:`mslearn-bike-automl`
+    - **Nome nuovo esperimento**: `mslearn-bike-rental`
     - **Descrizione**: Machine Learning automatizzato per la previsione del noleggio di biciclette
     - **Tag**: *nessuno*
 
@@ -57,24 +55,16 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
     - **Selezionare il tipo di attività**: regressione
     - **Selezionare il set di dati**: creare un nuovo set di dati con le impostazioni seguenti:
         - **Tipo di dati**:
-            - **Nome**: noleggi di biciclette
-            - **Descrizione**: dati cronologici del noleggio di biciclette
-            - **Tipo**: tabulare
+            - **Nome**: `bike-rentals`
+            - **Descrizione**: `Historic bike rental data`
+            - **Tipo**: Tabella (mltable)
         - **Origine dati**:
-            - Selezionare **Da file Web**.
-        - **URL Web**:
-            - **URL Web**: `https://aka.ms/bike-rentals`
-            - **Ignora convalida dei dati**: *non selezionare*
-        - **Impostazioni**:
-            - **Formato di file**: delimitato
-            - **Delimitatore**: virgola
-            - **Codifica**: UTF-8
-            - **Intestazioni colonna**: solo il primo file ha intestazioni
-            - **Ignora righe**: nessuna
-            - **Il set di dati contiene dati su più righe**: *non selezionare*
-        - **Schema**:
-            - Includi tutte le colonne diverse da **Path**
-            - Rivedi i tipi rilevati automaticamente
+            - Selezionare **Da file locali**
+        - **Tipo archiviazione di destinazione**:
+            - **Tipo di archivio dati**: archiviazione BLOB di Azure
+            - **Nome**: workspaceblobstore
+        - **Selezione MLtable**:
+            - **Caricare la cartella**: *Scaricare la cartella contenente i due file da cui caricare*`https://aka.ms/bike-rentals`
 
         Seleziona **Crea**. Dopo aver creato il set di dati, selezionare il set di dati **bike-rentals** per continuare a inviare il processo di ML automatizzato.
 
@@ -82,19 +72,20 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
 
     - **Tipo di attività**: regressione
     - **Set di dati**: noleggi di biciclette
-    - **Colonna di destinazione**: noleggi (numero intero)
+    - **Colonna di destinazione**: noleggi (intero)
     - **Impostazioni aggiuntive per la configurazione**:
-        - **Metrica primaria**: radice normalizzata dell'errore quadratico medio
+        - **Metrica primaria**: NormalizedRootMeanSquaredError
         - **Spiegare il modello migliore**: *non selezionato*
+        - **Abilitare l'impilamento dell'insieme**: *Non selezionata*
         - **Usare tutti i modelli supportati**: <u>deselezionato</u>. *Durante il processo si proveranno solo alcuni algoritmi specifici.*
         - **Modelli consentiti**: *selezionare solo **RandomForest** e **LightGBM**. Normalmente si vorrà provare il maggior numero possibile di modelli, ma ogni modello aggiunto aumenta il tempo necessario per eseguire il processo.*
     - **Limiti**: *espandere questa sezione*
-        - **Numero massimo di prove**: 3
-        - **Numero massimo di prove simultanee**: 3
-        - **Numero massimo di nodi**: 3
-        - **Soglia di punteggio metrica**: 0,085 (*in questo modo, se un modello raggiunge un punteggio della metrica Radice errore quadratico medio di 0,085 o inferiore, il processo termina.*)
-        - **Timeout**: 15
-        - **Timeout iterazione**: 15
+        - **Numero massimo di versioni di valutazione**: `3`
+        - **Numero massimo di versioni di valutazione simultanee**: `3`
+        - **Numero massimo di nodi**: `3`
+        - **Soglia di punteggio metrica**: `0.085` (*cosicché, se un modello raggiunge un punteggio della metrica Radice normalizzata dell'errore quadratico medio di 0,085 o inferiore, il processo termina*).
+        - **Timeout esperimento**: `15`
+        - **Timeout iterazione**: `15`
         - **Abilitare la terminazione anticipata**: *selezionata*
     - **Convalida e test:**
         - **Tipo di convalida**: suddivisione tra training e convalida
@@ -126,24 +117,25 @@ Al termine del processo di Machine Learning automatizzato, è possibile esaminar
   
 1. Selezionare il testo in **Nome dell'algoritmo** per il modello migliore per visualizzarne i dettagli.
 
-1. Selezionare la scheda **Metriche** e selezionare i grafici **residui** e **predicted_true**, se non sono già selezionati. 
+1. Selezionare la scheda **Metriche** e selezionare i grafici **residui** e **predicted_true**, se non sono già selezionati.
 
-    Esaminare i grafici che mostrano le prestazioni del modello. Il grafico dei **residui** mostra i *residui* (le differenze tra i valori stimati e effettivi) come istogramma. Il grafico **predicted_true** confronta i valori stimati con i valori true. 
+    Esaminare i grafici che mostrano le prestazioni del modello. Il grafico dei **residui** mostra i *residui* (le differenze tra i valori stimati e effettivi) come istogramma. Il grafico **predicted_true** confronta i valori stimati con i valori true.
 
 ## Distribuire e testare il modello
 
-1. Nella scheda **Modello** per il miglior modello sottoposto a training dal processo di Machine Learning automatizzato, selezionare **Distribuisci** e usare l'opzione **Servizio Web** per distribuire il modello con le seguenti impostazioni:
-    - **Nome**: previsione-noleggi
-    - **Descrizione**: predire i noleggi di biciclette
-    - **Tipo di elaborazione**: Istanza di Azure Container
-    - **Abilitare autenticazione**: *selezionato*
+1. Nella scheda **Modello** per il modello migliore sottoposto a training dal processo di Machine Learning automatizzato, selezionare **Distribuisci** e usa l'opzione **Endpoint in tempo reale** per distribuire il modello con le impostazioni seguenti:
+    - **Macchina virtuale**: Standard_DS3_v2
+    - **Numero di istanze**: 3
+    - **Endpoint**: Nuovo
+    - **Nome dell'endpoint**: *Lasciare il valore predefinito o assicurarsi che sia univoco a livello globale*
+    - **Nome distribuzione**: *Lasciare il valore predefinito*
+    - **Raccolta di dati di inferenza**: *Disabilitato*
+    - **Pacchetto del modello**: *Disabilitato*
 
 1. Attendere l'avvio della distribuzione. L'operazione potrebbe richiedere alcuni secondi. Lo **Stato di distribuzione** per l'endpoint **predizione-noleggi** verrà indicato nella parte principale della pagina come *In esecuzione*.
 1. Attendere che lo **Stato di distribuzione** cambi in *Completato*. L'operazione potrebbe richiedere da 5 a 10 minuti.
 
 ## Testare il servizio distribuito
-
->**Importante** Attualmente Azure Machine Learning Studio non supporta il tipo di creazione del set di dati necessario per usare i test di distribuzione. Forniremo un aggiorneremo quando sarà disponibile una risoluzione. 
 
 A questo punto è possibile testare il servizio distribuito.
 
