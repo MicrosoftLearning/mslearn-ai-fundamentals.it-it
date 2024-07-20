@@ -64,7 +64,7 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
             - **Tipo di archivio dati**: archiviazione BLOB di Azure
             - **Nome**: workspaceblobstore
         - **Selezione MLtable**:
-            - **Caricare la cartella**: *Scaricare la cartella contenente i due file da cui caricare*`https://aka.ms/bike-rentals`
+            - **Caricare la cartella**: *Scaricare e decomprimere la cartella contenente i due file necessari da cui caricare* `https://aka.ms/bike-rentals`
 
         Seleziona **Crea**. Dopo aver creato il set di dati, selezionare il set di dati **bike-rentals** per continuare a inviare il processo di ML automatizzato.
 
@@ -145,29 +145,31 @@ A questo punto è possibile testare il servizio distribuito.
 
 1. Nel riquadro **Dati di input per testare l'endpoint** sostituire il codice JSON del modello con i dati di input seguenti:
 
-    ```JSON
+    ```json
     {
-      "Inputs": { 
-        "data": [
-          {
-            "day": 1,
-            "mnth": 1,   
-            "year": 2022,
-            "season": 2,
-            "holiday": 0,
-            "weekday": 1,
-            "workingday": 1,
-            "weathersit": 2, 
-            "temp": 0.3, 
-            "atemp": 0.3,
-            "hum": 0.3,
-            "windspeed": 0.3 
-          }
-        ]    
-      },   
-      "GlobalParameters": 1.0
+      "input_data": {
+        "columns": [
+            {
+                "day": 1,
+                "mnth": 1,   
+                "year": 2022,
+                "season": 2,
+                "holiday": 0,
+                "weekday": 1,
+                "workingday": 1,
+                "weathersit": 2, 
+                "temp": 0.3, 
+                "atemp": 0.3,
+                "hum": 0.3,
+                "windspeed": 0.3 
+            }
+        ],
+        "index": [],
+        "data": []
+      }
     }
     ```
+
 
 1. Fare clic sul pulsante **Test**.
 
