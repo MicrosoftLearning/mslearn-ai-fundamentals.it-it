@@ -3,7 +3,7 @@ lab:
   title: Esplorare l'IA generativa nel portale Fonderia Azure AI
 ---
 
-# Esplorare l'IA generativa nel portale di Fonderia Azure AI
+# Esplorare l'IA generativa nel portale Fonderia Azure AI
 
 L'IA generativa descrive una categoria di funzionalità all'interno dell'intelligenza artificiale che creano contenuto. Le persone interagiscono in genere con l'intelligenza artificiale generativa incorporata in applicazioni per chat. In questo esercizio, verrà messa alla prova l'IA generativa nel portale Fonderia Azure AI, piattaforma Microsoft per la creazione di applicazioni intelligenti. 
 
@@ -21,7 +21,7 @@ L'IA generativa descrive una categoria di funzionalità all'interno dell'intelli
  
     ![Screenshot del riquadro Crea un progetto con nomi generati automaticamente per hub e progetto.](./media/azure-ai-foundry-create-project.png)
 
-    > **Importante**: per completare il resto del lab, è necessario eseguire il provisioning di una risorsa Servizi di Azure AI in una posizione specifica.
+> **Importante**: per completare il resto del lab, è necessario eseguire il provisioning di una risorsa Servizi di Azure AI in una posizione specifica.
 
 1. Nello stesso riquadro *Crea un progetto* selezionare **Personalizza** e una delle **Posizioni** seguenti: Stati Uniti orientali, Francia centrale, Corea centrale, Europa occidentale o Stati Uniti occidentali per completare il resto del lab. Quindi, selezionare **Crea**. 
 
@@ -39,7 +39,7 @@ L'IA generativa descrive una categoria di funzionalità all'interno dell'intelli
 
 ## Esplorare l'IA generativa nel playground della chat di Fonderia Azure AI
 
-1. Nella pagina Playground di Fonderia Azure AI selezionare **Prova il playground della chat**. Il Playground della chat è un'interfaccia utente che consente di provare a creare un'applicazione di chat con modelli diversi di IA generativa.  
+1. Nella pagina Playground di Fonderia Azure AI selezionare **Prova il playground della chat**. Il playground della chat è un'interfaccia utente che consente di provare a creare un'applicazione di chat con modelli diversi di intelligenza artificiale generativa.  
 
 1. Per usare il playground della chat, è necessario associarlo a un modello distribuito. Nel playground della chat, selezionare **Crea una distribuzione**. Cercare e selezionare **gpt-4**. 
 
