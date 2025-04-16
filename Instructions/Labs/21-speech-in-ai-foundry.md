@@ -45,9 +45,9 @@ In questo esercizio, verrà utilizzato Voce di Azure AI nel portale Fonderia Azu
 
 ## Esplorare il riconoscimento vocale nel playground Voce di Fonderia Azure AI
 
-Ora verrà provato il *riconoscimento vocale* nel playground Voce di Fonderia Azure AI. 
+Ora verrà provato il *riconoscimento vocale in tempo reale* nel playground Voce di Fonderia Azure AI. 
 
-1. Nella pagina *Voce* scorrere verso il basso e selezionare **Trascrizione in tempo reale** in *Prova funzionalità di riconoscimento vocale*. Si verrà portati a *Playground Voce*. 
+1. Nella pagina *Voce* scorrere verso il basso e selezionare **Riconoscimento vocale in tempo reale** in *Prova funzionalità di riconoscimento vocale*. Si verrà portati a *Playground Voce*. 
 
 1. Selezionare [**https://aka.ms/mslearn-speech-files**](https://aka.ms/mslearn-speech-files) per scaricare **speech.zip**. Apri la cartella . 
 
@@ -59,11 +59,11 @@ Ora verrà provato il *riconoscimento vocale* nel playground Voce di Fonderia Az
 
 1. Esaminare l'output, che dovrebbe essere stato riconosciuto e trascritto correttamente in testo.
 
-In questo esercizio sono stati provati i servizi Voce di Azure AI nel playground Voce di Fonderia Azure AI. È stata quindi usata la trascrizione in tempo reale per trascrivere una registrazione audio. È stato possibile visualizzare la trascrizione del testo generata durante la riproduzione del file audio.
+In questo esercizio sono stati provati i servizi Voce di Azure AI nel playground Voce di Fonderia Azure AI. È stato quindi usato il servizio di conversione della voce in testo scritto in tempo reale per trascrivere una registrazione audio. È stato possibile visualizzare la trascrizione del testo generata durante la riproduzione del file audio.
 
 ## Eseguire la pulizia
 
-Se non si prevede di eseguire altri esercizi, eliminare eventuali risorse non più necessarie. In questo modo si evita di accumulare costi non necessari.
+Se non si intende eseguire altri esercizi, eliminare eventuali risorse non più necessarie. In questo modo si evita di accumulare costi non necessari.
 
 1. Aprire il [portale di Azure]( https://portal.azure.com) e selezionare il gruppo di risorse che contiene la risorsa creata.
 1. Selezionare la risorsa e selezionare **Elimina**, quindi **Sì** per confermare. La risorsa viene quindi eliminata.

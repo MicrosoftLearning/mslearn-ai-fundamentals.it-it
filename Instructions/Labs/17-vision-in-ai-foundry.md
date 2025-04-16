@@ -45,7 +45,7 @@ Si supponga che l'azienda di vendita al dettaglio fittizia *Northwind Traders* a
 
 ## Generare didascalie per un'immagine
 
-Verrà utilizzata ora la funzionalità di didascalia delle immagini di Visione di Azure AI per analizzare le immagini scattate da una fotocamera nell'archivio *Northwind Traders*. Le didascalie delle immagini sono disponibili tramite le funzionalità **Caption** e **Dense Captions**.
+Ora verrà utilizzata la funzionalità di didascalia delle immagini di Visione di Azure AI per analizzare le immagini scattate da una fotocamera nell'archivio *Northwind Traders*. Le didascalie delle immagini sono disponibili tramite le funzionalità **Caption** e **Dense Captions**.
 
 1. Nella pagina *Visione e documento* scorrere verso il basso e selezionare **Immagine** in *Visualizza tutte le altre funzionalità di visione*. Selezionare quindi il riquadro **Didascalia immagine**.
 
@@ -79,13 +79,15 @@ La funzionalità successiva che si proverà è la funzionalità *Estrai tag*. L'
 
 1. Tornare alla pagina *Visione e documento* di Fonderia Azure AI, quindi selezionare la scheda **Immagine** e il riquadro **Estrazione tag comuni**.
 
-1. Aprire la cartella contenente le immagini scaricate e individuare il file denominato **store-image-2.jpg**, simile al seguente:
+2. In **Scegliere il modello da provare**, lasciare selezionato **Prodotto predefinito vs. modello gap**. In **Scegliere la lingua**selezionare **Inglese** o una lingua delle preferenze.
+
+3. Aprire la cartella contenente le immagini scaricate e individuare il file denominato **store-image-2.jpg**, simile al seguente:
 
     ![Immagine di una persona con un carrello della spesa in un supermercato](./media/analyze-images-vision/store-camera-2.jpg)
 
-1. Caricare il file **store-camera-2.jpg**.
+4. Caricare il file **store-camera-2.jpg**.
 
-1. Esaminare l'elenco dei tag estratti dall'immagine e il punteggio di attendibilità per ognuno nel pannello degli attributi rilevati. Qui il punteggio di attendibilità è la probabilità che il testo per l'attributo rilevato descriva ciò che è effettivamente presente nell'immagine. Si noti nell'elenco dei tag che include non solo oggetti, ma azioni, ad esempio *shopping*, *vendita* e *standing*.
+5. Esaminare l'elenco dei tag estratti dall'immagine e il punteggio di attendibilità per ognuno nel pannello degli attributi rilevati. Qui il punteggio di attendibilità è la probabilità che il testo per l'attributo rilevato descriva ciò che è effettivamente presente nell'immagine. Si noti nell'elenco dei tag che include non solo oggetti, ma azioni, ad esempio *shopping*, *vendita* e *standing*.
 
     ![Uno screenshot del pannello rileva attributi in Vision Studio con punteggi di testo e attendibilità visualizzati accanto all'immagine originale.](./media/analyze-images-vision/detect-attributes.png)
 
@@ -94,6 +96,8 @@ La funzionalità successiva che si proverà è la funzionalità *Estrai tag*. L'
 In questa attività si usa la funzionalità **Rilevamento oggetti** di Analisi immagini. Rilevamento oggetti rileva ed estrae rettangoli delimitatori basati su migliaia di oggetti riconoscibili e esseri viventi.
 
 1. Tornare alla pagina *Visione e documento* di Fonderia Azure AI, quindi selezionare la scheda **Immagine** e il riquadro **Rilevamento oggetti comuni**.
+
+1. In **Scegliere il modello da provare**, lasciare selezionato **Prodotto predefinito vs. modello gap**.
 
 1. Aprire la cartella contenente le immagini scaricate e individuare il file denominato **store-camera-3.jpg**, simile al seguente:
 
