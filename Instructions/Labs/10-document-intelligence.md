@@ -9,7 +9,7 @@ Il servizio **Informazioni sui documenti di Azure AI** consente all'utente di an
 
 In che modo Informazioni sui documenti si basa sul riconoscimento ottico dei caratteri (OCR)? Il riconoscimento ottico dei caratteri (OCR) è in grado di leggere documenti stampati o scritti a mano, ma estrae testo in un formato non strutturato che è difficile archiviare in un database o analizzare. Informazioni sui documenti ricava il senso dei dati non strutturati acquisendo la struttura del testo, ad esempio i campi dei dati e le informazioni nelle tabelle. 
 
-In questo esercizio, verranno utilizzati i modelli predefiniti di Informazioni sui documenti di Azure AI nel portale Fonderia di Azure AI, una piattaforma di Microsoft per la creazione di applicazioni intelligenti, per riconoscere i dati da una ricevuta. 
+In questo esercizio, verranno utilizzati i modelli predefiniti di Informazioni sui documenti di Azure AI nel portale Fonderia di Azure AI, piattaforma Microsoft per la creazione di applicazioni intelligenti, per riconoscere i dati da una ricevuta. 
 
 ## Creare un progetto nel portale Fonderia Azure AI
 

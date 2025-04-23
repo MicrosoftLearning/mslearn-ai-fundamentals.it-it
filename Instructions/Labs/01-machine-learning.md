@@ -7,7 +7,7 @@ lab:
 
 In questo esercizio si userà la funzionalità di Machine Learning automatizzata in Azure Machine Learning per eseguire il training e valutare un modello di Machine Learning. Si distribuirà e testerà quindi il modello sottoposto a training.
 
-Il completamento di questo esercizio richiederà circa **30** minuti.
+Il completamento di questo esercizio richiede circa **35** minuti.
 
 ## Creare un'area di lavoro di Azure Machine Learning
 
@@ -21,7 +21,7 @@ Per usare Azure Machine Learning, è necessario effettuare il provisioning di un
     - **Sottoscrizione**: *la sottoscrizione di Azure usata*.
     - **Gruppo di risorse**: *creare o selezionare un gruppo di risorse*.
     - **Nome**: *immettere un nome univoco per l'area di lavoro*.
-    - **Area**: *selezionare l'area geografica più vicina*.
+    - **Area**: Stati Uniti orientali.
     - **Account di archiviazione**: *prendere nota del nuovo account di archiviazione predefinito che verrà creato per l'area di lavoro*.
     - **Insieme di credenziali delle chiavi**: *prendere nota del nuovo insieme di credenziali delle chiavi predefinito che verrà creato per l'area di lavoro*.
     - **Application Insights**: *prendere nota della nuova risorsa Application Insights predefinita che verrà creata per l'area di lavoro*.
@@ -29,7 +29,9 @@ Per usare Azure Machine Learning, è necessario effettuare il provisioning di un
 
 1. Selezionare **Rivedi e crea** e quindi **Crea**. Attendere che l'area di lavoro venga creata (l'operazione può richiedere alcuni minuti) e quindi passare alla risorsa distribuita.
 
-1. Selezionare **Avvia studio** (in alternativa, aprire una nuova scheda nel browser e passare a [https://ml.azure.com](https://ml.azure.com?azure-portal=true)) e accedere allo studio di Azure Machine Learning usando il proprio account Microsoft. Chiudere eventuali messaggi visualizzati.
+#### Avvia Studio 
+
+1. Nella risorsa dell'area di lavoro di Azure Machine Learning, selezionare **Avvia studio** (o aprire una nuova scheda del browser e passare a [https://ml.azure.com](https://ml.azure.com?azure-portal=true) e accedere a studio di Azure Machine Learning usando l'account Microsoft). Chiudere eventuali messaggi visualizzati.
 
 1. Nello studio di Azure Machine Learning verrà visualizzata l'area di lavoro appena creata. In caso contrario, selezionare **All workspaces** (Tutte le aree di lavoro) nel menu a sinistra e quindi selezionare l'area di lavoro appena creata.
 
@@ -45,7 +47,7 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
 
     **Impostazioni di base**:
 
-    - **Nome processo**:`mslearn-bike-automl`
+    - **Nome processo**: il campo Nome processo deve essere già prepopolato con un nome univoco. Mantenerlo invariato.
     - **Nome nuovo esperimento**: `mslearn-bike-rental`
     - **Descrizione**: Machine Learning automatizzato per la previsione del noleggio di biciclette
     - **Tag**: *nessuno*
@@ -112,8 +114,6 @@ Al termine del processo di Machine Learning automatizzato, è possibile esaminar
 
 1. Nella scheda **Panoramica** del processo di Machine Learning automatizzato prendere nota del riepilogo del modello migliore.
     ![Screenshot del riepilogo del modello migliore del processo di Machine Learning automatizzato con una casella attorno al nome dell'algoritmo.](./media/use-automated-machine-learning/complete-run.png)
-
-    > **Nota:** è possibile che sotto lo stato venga visualizzato un messaggio simile ad "Avviso: punteggio di uscita specificato dall'utente raggiunto…". Si tratta di un messaggio previsto. Continuare con il passaggio successivo.
   
 1. Selezionare il testo in **Nome dell'algoritmo** per il modello migliore per visualizzarne i dettagli.
 
@@ -132,6 +132,8 @@ Al termine del processo di Machine Learning automatizzato, è possibile esaminar
     - **Raccolta di dati di inferenza**: *Disabilitato*
     - **Pacchetto del modello**: *Disabilitato*
 
+    > **Nota** Se viene visualizzato un messaggio che indica che la quota non è sufficiente per selezionare la macchina virtuale *Standard_DS3_v2*, selezionarne un'altra.
+
 1. Attendere l'avvio della distribuzione. L'operazione potrebbe richiedere alcuni secondi. Lo **Stato di distribuzione** per l'endpoint **predizione-noleggi** verrà indicato nella parte principale della pagina come *In esecuzione*.
 1. Attendere che lo **Stato di distribuzione** cambi in *Completato*. L'operazione potrebbe richiedere da 5 a 10 minuti.
 
@@ -146,41 +148,37 @@ A questo punto è possibile testare il servizio distribuito.
 1. Nel riquadro **Dati di input per testare l'endpoint** sostituire il codice JSON del modello con i dati di input seguenti:
 
     ```json
-    {
-      "input_data": {
-        "columns": [
-            {
-                "day": 1,
-                "mnth": 1,   
-                "year": 2022,
-                "season": 2,
-                "holiday": 0,
-                "weekday": 1,
-                "workingday": 1,
-                "weathersit": 2, 
-                "temp": 0.3, 
-                "atemp": 0.3,
-                "hum": 0.3,
-                "windspeed": 0.3 
-            }
-        ],
-        "index": [],
-        "data": []
-      }
+      {
+     "input_data": {
+       "columns": [
+         "day",
+         "mnth",
+         "year",
+         "season",
+         "holiday",
+         "weekday",
+         "workingday",
+         "weathersit",
+         "temp",
+         "atemp",
+         "hum",
+         "windspeed"
+       ],
+       "index": [0],
+       "data": [[1,1,2022,2,0,1,1,2,0.3,0.3,0.3,0.3]]
+     }
     }
-    ```
 
+    ```
 
 1. Fare clic sul pulsante **Test**.
 
 1. Esaminare i risultati dei test, che includono un numero stimato dei noleggi in base alle caratteristiche di input, simile a questo:
 
     ```JSON
-    {
-      "Results": [
-        444.27799000000000
-      ]
-    }
+    [
+      352.3564674945718
+    ]
     ```
 
     Il riquadro di test ha considerato i dati di input e ha usato il modello sottoposto a training per restituire il numero stimato di noleggi.
