@@ -3,11 +3,9 @@ lab:
   title: Usare Risposta alla domanda con Language Studio
 ---
 
-# Usare il modello di risposta alle domande con Language Studio
+# Usare Risposta alla domanda con Language Studio
 
-In questo esercizio si userà Language Studio per creare ed eseguire il training di una knowledge base di domande e risposte che verranno usate da un bot dei servizi clienti. Il contenuto della knowledge base proviene da una pagina di domande frequenti esistente del sito Web di Margie's Travel, un'agenzia di viaggi fittizia. Si userà quindi Language Studio per vedere come funziona quando viene usato dai clienti.
-
-Quando si implementa un bot, il primo passaggio consiste nel creare una knowledge base costituita da coppie di domande e risposte. Essa viene usata insieme alle funzionalità di elaborazione del linguaggio naturale predefinite in modo che il bot possa interpretare le domande e trovare la risposta più appropriata per l'utente.
+In questo esercizio, verrà usato Language Studio per creare ed eseguire il training di una knowledge base di domande e risposte. Il contenuto della knowledge base proviene da una pagina di domande frequenti esistente del sito Web di Margie's Travel, un'agenzia di viaggi fittizia. Si userà quindi Language Studio per vedere come funziona quando viene usato dai clienti.
 
 Lingua di Azure AI include funzionalità di *risposta alle domande*, che verranno usate per creare una knowledge base. Le knowledge base possono essere create immettendo manualmente coppie di domande e risposte, o a partire da un documento o da una pagina Web esistente. Margie's Travel vuole usare il documento con le domande frequenti esistenti.
 
@@ -50,10 +48,10 @@ Per usare Risposta alle domande, è necessaria una risorsa del servizio **Lingua
 1. Se viene richiesto di scegliere una risorsa del servizio Lingua, selezionare le impostazioni seguenti:
     - **Directory di Azure**: *la directory di Azure contenente la sottoscrizione*.
     - **Sottoscrizione di Azure**: *La tua sottoscrizione di Azure*.
-    - **Risorsa linguistica**: *la risorsa del servizio Lingua creata in precedenza*.
+    - **Risorsa della lingua**: *La risorsa del servizio Lingua creata in precedenza.*
 
     Se ***non*** viene chiesto di scegliere una risorsa Lingua, è possibile che nella sottoscrizione siano presenti più risorse di questo tipo e in tal caso:
-    1. Nella barra in alto della pagina selezionare **Impostazioni (⚙)**.      
+    1. Nella barra in alto della pagina selezionare **Impostazioni (&#9881;)**.      
     1. Nella pagina **Impostazioni** visualizzare la scheda **Risorse**.
     1. Selezionare la risorsa del servizio Lingua appena creata, poi selezionare **Cambia risorsa**.
     1. Nella parte superiore della pagina selezionare **Language Studio** per tornare alla home page di Language Studio.
@@ -104,54 +102,14 @@ Ora che è stata creata una knowledge base, è possibile testarla.
 1. Provare con un'altra domanda, ad esempio `How can I cancel a reservation?`
 1. Una volta terminato il test della knowledge base, selezionare **Test** per chiudere il riquadro di test.
 
-## Creare un bot per la knowledge base
+## Distribuire il progetto
 
-La knowledge base offre un servizio back-end che le applicazioni client possono usare per rispondere alle domande tramite una qualche forma di interfaccia utente. In genere, queste applicazioni client sono bot. Per rendere la knowledge base disponibile per un bot, è necessario pubblicarla come servizio accessibile tramite HTTP. È quindi possibile usare il servizio Azure Bot per creare e ospitare un bot che usa la knowledge base per rispondere alle domande dell'utente.
+È possibile distribuire la Knowledge base come applicazione client per rispondere alle domande.
 
 1. Nel pannello a sinistra selezionare **Distribuisci knowledge base**.
 1. Nella parte superiore della pagina selezionare **Distribuisci**. Una finestra di dialogo chiederà se si vuole distribuire il progetto. Seleziona **Distribuisci**.
 
  ![Distribuire la knowledge base.](media/create-a-bot/deploy-knowledge-base.png)
-
-1. Dopo aver distribuito il servizio, selezionare **Crea un bot**. Verrà aperto il portale di Azure in una nuova scheda del browser, dove è possibile creare un bot per app Web nella sottoscrizione di Azure in uso.
-1. Nel portale di Azure, creare un **bot per app Web**. È possibile che venga visualizzato un messaggio di avviso per verificare che l'origine del modello sia attendibile. Non è necessario eseguire alcuna azione per il messaggio. Continuare aggiornando le impostazioni seguenti:
-
-    - **Dettagli del progetto**
-        - **Sottoscrizione**: *la sottoscrizione di Azure usata*
-        - **Gruppo di risorse**: *gruppo di risorse contenente la risorsa Lingua*
-    - **Dettagli istanza**
-        - **Posizione del gruppo di risorse**: *la stessa posizione del servizio Lingua*.
-    - **Azure Bot**
-        - **Handle di bot**: *nome univoco per il bot* (*pre-popolato*)
-    - **Scegliere il piano tariffario**
-        - **Piano tariffario**: gratuito F0 (potrebbe essere necessario selezionare *Cambia piano*).
-    - **ID app Microsoft**
-        - **Tipo di creazione**: *Selezionare **Crea una nuova identità gestita assegnata dall'utente*** 
-
-5. Selezionare **Avanti** per procedere all’aggiornamento delle impostazioni. 
-    - **Servizio app**
-        - **Nome dell'app**: *uguale a **Handle di bot** con **.azurewebsites.net** aggiunto automaticamente*
-        - **Lingua dell'SDK**: *scegliere C# o Node.js*
-    - **Piano di servizio app**
-        - **Tipo di creazione**: *Selezionare **Crea nuovo piano di servizio app***
-    - **Impostazioni app**
-        - **Chiave della risorsa linguistica**: *Sarà necessario copiare la chiave della risorsa linguistica e incollarla qui*:
-            - Aprire un'altra scheda del browser e accedere al portale di Azure su [https://portal.azure.com](https://portal.azure.com?azure-portal=true).
-            - Passare alla risorsa del servizio Lingua.
-            - Nella pagina **Chiavi ed endpoint** copiare una delle chiavi
-            - Incollarla qui.
-        - **Nome progetto della lingua**: MargiesTravel
-        - **Nome host dell'endpoint di servizio della lingua**: *pre-popolato con l'endpoint di servizio della lingua*
-    - **Dettagli del servizio della lingua**
-        - **ID sottoscrizione**: *pre-popolato con il proprio ID sottoscrizione*
-        - **Nome gruppo di risorse**: *pre-popolato con il proprio nome del gruppo di risorse.*
-        - **Nome dell'account**: *pre-popolato con il nome della risorsa*
-
-1. Seleziona **Crea**. Poi attendere che il proprio bot venga creato (l'icona di notifica a forma di campana in alto a destra si muove durante l'attesa). Quindi, nella notifica di completamento della distribuzione, selezionare **Vai alla risorsa** (oppure in alternativa, sulla home page, cliccare su **Gruppi di risorse**, aprire il gruppo di risorse in cui è stato creato il bot e selezionare la risorsa del **bot Azure**).
-1. Nel riquadro sinistro del bot cercare **Impostazioni**, selezionare **Test in chat Web** e attendere che il bot visualizzi il messaggio **Hello and Welcome** (l'inizializzazione potrebbe richiedere alcuni secondi).
-1. Usa l'interfaccia della chat di test per assicurarti che il bot risponda alle domande dalla tua knowledge base come previsto. Provare ad esempio a inviare `I need to cancel my hotel`.
-
-Sperimentare l'uso del bot. Probabilmente si noterà che può rispondere alle domande disponibili nelle domande frequenti in modo abbastanza accurato, ma avrà una capacità limitata di interpretare le domande per cui non è stato sottoposto a training. È sempre possibile usare Language Studio per modificare la knowledge base per migliorarla e ripubblicarla.
 
 ## Eseguire la pulizia
 
@@ -163,4 +121,3 @@ Se non si intende eseguire altri esercizi, eliminare eventuali risorse non più 
 ## Altre informazioni
 
 - Per altre informazioni sul servizio di risposta alla domanda, vedere la [documentazione](https://docs.microsoft.com/azure/cognitive-services/language-service/question-answering/overview).
-- Per altre informazioni sul servizio Bot Microsoft, vedere [la pagina del servizio Azure Bot](https://azure.microsoft.com/services/bot-service/).

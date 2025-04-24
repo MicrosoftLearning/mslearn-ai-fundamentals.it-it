@@ -7,7 +7,7 @@ lab:
 
 L'elaborazione del linguaggio naturale (NLP) è un ramo dell'intelligenza artificiale che si occupa del linguaggio scritto o parlato. È possibile usare l'elaborazione del linguaggio naturale per creare soluzioni che estraggono il significato semantico dal testo o dal parlato, oppure soluzioni che formulano risposte significative in linguaggio naturale.
 
-Il servizio Lingua di Azure AI include l'analisi del testo, con funzionalità quali riconoscimento entità, estrazione frasi chiave, riepilogo e analisi del sentiment. Si supponga, ad esempio, che l'agenzia di viaggi fittizia Margie's Travel incoraggi i clienti a inviare recensioni per i soggiorni in hotel. È possibile usare il servizio di linguaggio per estrarre entità denominate, identificare frasi chiave, riepilogare il testo e altro ancora.
+Il servizio Lingua di Azure AI include Analisi del testo, con funzionalità quali riconoscimento delle entità, estrazione di frasi chiave, riepilogo e analisi del sentiment. Si supponga, ad esempio, che l'agenzia di viaggi fittizia Margie's Travel incoraggi i clienti a inviare recensioni per i soggiorni in hotel. È possibile usare il servizio di linguaggio per estrarre entità denominate, identificare frasi chiave, riepilogare il testo e altro ancora.
 
 In questo esercizio, verrà utilizzato Lingua di Azure AI nel portale Fonderia Azure AI, piattaforma Microsoft per la creazione di applicazioni intelligenti, per analizzare le recensioni degli hotel. 
 
@@ -62,7 +62,7 @@ Le *entità denominate* sono parole che descrivono persone, luoghi e oggetti con
 
 ## Estrarre le frasi chiave con Lingua di Azure AI nel portale Fonderia Azure AI
 
-Le *frasi chiave* sono le informazioni più importanti nel testo. Ora verrà utilizzata la funzionalità di estrazione frasi chiave di Lingua di Azure AI per estrarre informazioni importanti da una recensione.
+Le *frasi chiave* sono le informazioni più importanti nel testo. Verrà utilizzata ora la funzionalità di estrazione frasi chiave di Lingua di Azure AI per estrarre informazioni importanti da una recensione.
 
 1. Nel playground Lingua selezionare **Estrai informazioni**. Selezionare quindi il riquadro **Estrai frasi chiave**. 
 
