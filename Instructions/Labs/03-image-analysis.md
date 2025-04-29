@@ -45,7 +45,7 @@ Si supponga che l'azienda di vendita al dettaglio fittizia *Northwind Traders* a
 
 ## Generare didascalie per un'immagine
 
-Verrà utilizzata ora la funzionalità di didascalia delle immagini di Visione di Azure AI per analizzare le immagini scattate da una fotocamera nell'archivio *Northwind Traders*. Le didascalie delle immagini sono disponibili tramite le funzionalità **Caption** e **Dense Captions**.
+Ora verrà utilizzata la funzionalità di didascalia delle immagini di Visione di Azure AI per analizzare le immagini scattate da una fotocamera nell'archivio *Northwind Traders*. Le didascalie delle immagini sono disponibili tramite le funzionalità **Caption** e **Dense Captions**.
 
 1. Nella pagina *Visione e documento* scorrere verso il basso e selezionare **Immagine** in *Visualizza tutte le altre funzionalità di visione*. Selezionare quindi il riquadro **Didascalia immagine**.
 
