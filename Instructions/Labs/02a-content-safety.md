@@ -1,8 +1,3 @@
----
-lab:
-  title: Esplorare la sicurezza dei contenuti in Fonderia Azure AI
----
-
 # Esplorare la sicurezza dei contenuti in Fonderia Azure AI
 
 I Servizi di Azure AI consentono agli utenti di creare applicazioni di intelligenza artificiale con API e modelli pronti all'uso, predefiniti e personalizzabili. In questo esercizio verrà esaminato uno dei servizi, Sicurezza dei contenuti di Azure AI, che consente di moderare il testo e il contenuto delle immagini. Nel portale Fonderia Azure AI, la piattaforma Microsoft per la creazione di applicazioni intelligenti, verrà utilizzato Sicurezza dei contenuti di Azure AI per classificare il testo e assegnargli il punteggio di gravità. 
