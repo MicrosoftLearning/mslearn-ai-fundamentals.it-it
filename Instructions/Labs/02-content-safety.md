@@ -33,13 +33,13 @@ Per incorporare i servizi di Azure AI nelle applicazioni, gli sviluppatori devon
 
 ## Vedere i Servizi di Azure AI in azione
 
-1. In una scheda del browser passare a [Fonderia Azure AI](https://ai.azure.com?azure-portal=true).
+Per iniziare, creare un progetto Fonderia Azure AI.
 
-1. Accedi con il tuo account. 
+1. In un Web browser, aprire il [Portale Fonderia Azure AI](https://ai.azure.com) su `https://ai.azure.com` e accedere usando le credenziali di Azure. Chiudere tutti i riquadri dei suggerimenti o di avvio rapido che vengono aperti al primo accesso e, se necessario, usare il logo **Fonderia Azure AI** in alto a sinistra per passare alla home page, simile all'immagine seguente (chiudere il riquadro **Aiuto** nel caso sia aperto):
 
-1. In *Lavorare al di fuori di un progetto*, selezionare il riquadro **Visualizza servizi di intelligenza artificiale**.
+    ![Screenshot della home page di Fonderia Azure AI con l'opzione Crea un agente selezionata.](./media/azure-ai-foundry-home-page.png)
  
-    ![Screenshot del menu a sinistra nella schermata del progetto con Servizi di intelligenza artificiale selezionato.](./media/view-ai-foundry-outside-project.png)  
+1. In una nuova finestra del browser, aprire la [pagina di esplorazione dei servizi di Azure AI](https://ai.azure.com/explore/aiservices).
 
 1. Nella pagina *Servizi di intelligenza artificiale* selezionare il riquadro *Visione e documento* per provare le funzionalità Visione e documento di Azure AI.
 
@@ -64,12 +64,4 @@ Per incorporare i servizi di Azure AI nelle applicazioni, gli sviluppatori devon
 ## Eseguire la pulizia 
 
 Al termine, è possibile eliminare la risorsa dei servizi di Azure AI dal portale di Azure. L'eliminazione della risorsa è un modo per ridurre i costi che si accumulano quando la risorsa è presente nella sottoscrizione. A tal fine, passare alla pagina **Panoramica** della risorsa dei servizi di Azure AI. Selezionare **Elimina** nella parte superiore della schermata.
-
-
-
-
-
-
-
-
 

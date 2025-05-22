@@ -13,37 +13,38 @@ In questo esercizio, verranno utilizzati i modelli predefiniti di Informazioni s
 
 ## Creare un progetto nel portale Fonderia Azure AI
 
-1. In una scheda del browser passare a [Fonderia Azure AI](https://ai.azure.com?azure-portal=true).
+Per iniziare, creare un progetto Fonderia Azure AI.
 
-1. Accedi con il tuo account. 
+1. In un Web browser, aprire il [Portale Fonderia Azure AI](https://ai.azure.com) su `https://ai.azure.com` e accedere usando le credenziali di Azure. Chiudere tutti i riquadri dei suggerimenti o di avvio rapido che vengono aperti al primo accesso e, se necessario, usare il logo **Fonderia Azure AI** in alto a sinistra per passare alla home page, simile all'immagine seguente (chiudere il riquadro **Aiuto** nel caso sia aperto):
 
-1. Nella home page del portale Fonderia Azure AI, selezionare **Crea un progetto**. In Fonderia Azure AI, i progetti sono contenitori che consentono di organizzare il lavoro.  
+    ![Screenshot della home page di Fonderia Azure AI con l'opzione Crea un agente selezionata.](./media/azure-ai-foundry-home-page.png)
 
-    ![Screenshot della home page di Fonderia Azure AI con Crea un progetto selezionato.](./media/azure-ai-foundry-home-page.png)
+1. Nella home page, selezionare **+ Crea un agente**.
 
-1. Nel riquadro *Crea un progetto* verrà visualizzato un nome di progetto generato, che è possibile mantenere così com'è. A seconda che in passato sia stato creato un hub, verrà visualizzato un elenco di *nuove* risorse di Azure da creare o un elenco a discesa di hub esistenti. Se viene visualizzato l'elenco a discesa degli hub esistenti, selezionare *Crea nuovo hub*, creare un nome univoco per l'hub e selezionare *Avanti*.  
- 
-    ![Screenshot del riquadro Crea un progetto con nomi generati automaticamente per hub e progetto.](./media/azure-ai-foundry-create-project.png)
+1. Nella procedura guidata **Crea un agente**, immettere un nome valido per il progetto. 
 
-> **Importante**: per completare il resto del lab, è necessario eseguire il provisioning di una risorsa Servizi di Azure AI in una posizione specifica.
+1. Selezionare **Opzioni avanzate** e specificare le impostazioni seguenti:
+    - **Risorsa di Fonderia Azure AI**: *mantenere il nome predefinito*
+    - **Sottoscrizione**: *la sottoscrizione di Azure usata*
+    - **Gruppo di risorse**: *creare o selezionare un gruppo di risorse*
+    - **Area**: selezionare una delle seguenti posizioni:
+        * Stati Uniti orientali
+        * Francia centrale
+        * Corea centrale
+        * Europa occidentale
+        * Stati Uniti occidentali
 
-1. Nello stesso riquadro *Crea un progetto* selezionare **Personalizza** e una delle **Posizioni** seguenti: Stati Uniti orientali, Francia centrale, Corea centrale, Europa occidentale o Stati Uniti occidentali per completare il resto del lab. Quindi, selezionare **Crea**. 
+1. Selezionare **Crea** e rivedere la configurazione. Attendere il completamento del processo di configurazione.
 
-1. Prendere nota delle risorse create: 
-- Servizi di Azure AI
-- Hub di Azure per intelligenza artificiale
-- Progetto Azure per intelligenza artificiale
-- Account di archiviazione
-- Key vault
-- Gruppo di risorse  
- 
-1. Dopo aver creato le risorse, verrà visualizzata la pagina *Panoramica* del progetto. Nel menu a sinistra nella schermata selezionare **Servizi di intelligenza artificiale**.
- 
-    ![Screenshot del menu a sinistra nella schermata del progetto con Servizi di intelligenza artificiale selezionato.](./media/azure-ai-foundry-ai-services.png)  
+    >**Nota**: se viene visualizzato un errore di autorizzazione, selezionare il pulsante **Correggi** per aggiungere le autorizzazioni appropriate per continuare.
 
-1. Nella pagina *Servizi di intelligenza artificiale* selezionare il riquadro *Visione e documento* per provare le funzionalità di informazioni sui documenti di Azure AI.
+1. Quando il progetto viene creato, per impostazione predefinita viene visualizzato il playground Agenti nel portale Fonderia Azure AI, simile al seguente:
 
-    ![Screenshot del riquadro Visione e documento selezionato nella pagina Servizi di intelligenza artificiale.](./media/vision-document-tile.png)
+    ![Screenshot dei dettagli di un progetto di Azure AI nel portale Fonderia di Azure AI.](./media/ai-foundry-project-2.png)
+
+1. In una nuova finestra del browser, aprire la [pagina di esplorazione dei servizi di Azure AI](https://ai.azure.com/explore/aiservices).
+
+1. Nella pagina *Servizi di intelligenza artificiale* selezionare il riquadro *Visione e documento* per provare le funzionalità Visione e documento di Azure AI.
 
 ## Analizzare una ricevuta con Informazioni sui documenti di Azure AI in Fonderia Azure AI 
 
