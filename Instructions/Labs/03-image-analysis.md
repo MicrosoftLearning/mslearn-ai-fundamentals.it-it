@@ -11,20 +11,15 @@ Si supponga che l'azienda di vendita al dettaglio fittizia *Northwind Traders* a
 
 ## Creare un progetto nel portale Fonderia Azure AI
 
-Per iniziare, creare un progetto Fonderia Azure AI.
+1. In un Web browser, aprire il [Portale Fonderia Azure AI](https://ai.azure.com) su `https://ai.azure.com` e accedere usando le credenziali di Azure. Chiudere eventuali suggerimenti o riquadri di avvio rapido che vengono aperti al primo accesso. 
 
-1. In un Web browser, aprire il [Portale Fonderia Azure AI](https://ai.azure.com) su `https://ai.azure.com` e accedere usando le credenziali di Azure. Chiudere tutti i riquadri dei suggerimenti o di avvio rapido che vengono aperti al primo accesso e, se necessario, usare il logo **Fonderia Azure AI** in alto a sinistra per passare alla home page, simile all'immagine seguente (chiudere il riquadro **Aiuto** nel caso sia aperto):
+1. Nel browser, passare a `https://ai.azure.com/managementCenter/allResources` e selezionare **Crea**. Scegliere quindi l'opzione per creare una nuova *risorsa Hub IA*.
 
-    ![Screenshot della home page di Fonderia Azure AI con l'opzione Crea un agente selezionata.](./media/azure-ai-foundry-home-page.png)
+1. Nella procedura guidata *Creare un progetto*, immettere un nome valido per il progetto e, se viene suggerito un hub esistente, selezionare l'opzione per crearne uno *nuovo*. 
 
-1. Nella home page, selezionare **+ Crea un agente**.
-
-1. Nella procedura guidata **Crea un agente**, immettere un nome valido per il progetto. 
-
-1. Selezionare **Opzioni avanzate** e specificare le impostazioni seguenti:
-    - **Risorsa di Fonderia Azure AI**: *mantenere il nome predefinito*
-    - **Sottoscrizione**: *la sottoscrizione di Azure usata*
-    - **Gruppo di risorse**: *creare o selezionare un gruppo di risorse*
+1. Espandere *Opzioni avanzate* per specificare le impostazioni seguenti per il progetto:
+    - **Sottoscrizione**: sottoscrizione di Azure.
+    - **Gruppo di risorse**: creare o selezionare un gruppo di risorse
     - **Area**: selezionare una delle seguenti posizioni:
         * Stati Uniti orientali
         * Francia centrale
@@ -32,17 +27,13 @@ Per iniziare, creare un progetto Fonderia Azure AI.
         * Europa occidentale
         * Stati Uniti occidentali
 
-1. Selezionare **Crea** e rivedere la configurazione. Attendere il completamento del processo di configurazione.
+    Attendere la creazione del progetto o dell'hub.
 
-    >**Nota**: se viene visualizzato un errore di autorizzazione, selezionare il pulsante **Correggi** per aggiungere le autorizzazioni appropriate per continuare.
-
-1. Quando il progetto viene creato, per impostazione predefinita viene visualizzato il playground Agenti nel portale Fonderia Azure AI, simile al seguente:
-
-    ![Screenshot dei dettagli di un progetto di Azure AI nel portale Fonderia di Azure AI.](./media/ai-foundry-project-2.png)
- 
-1. In una nuova finestra del browser, aprire la [pagina di esplorazione dei servizi di Azure AI](https://ai.azure.com/explore/aiservices).
+1. Quando il progetto viene creato, verrà visualizzata una pagina *Panoramica* dei dettagli del progetto. Selezionare **Servizi di intelligenza artificiale** nel menu a sinistra (potrebbe essere necessario espandere il menu facendo clic sull'icona in alto per leggerne il contenuto). 
 
 1. Nella pagina *Servizi di intelligenza artificiale* selezionare il riquadro *Visione e documento* per provare le funzionalità Visione e documento di Azure AI.
+
+    ![Screenshot del riquadro Visione e Documento in Fonderia Azure AI.](./media/vision-document-tile.png)
 
 ## Generare didascalie per un'immagine
 
@@ -51,6 +42,8 @@ Ora verrà utilizzata la funzionalità di didascalia delle immagini di Visione d
 1. Nella pagina *Visione e documento* scorrere verso il basso e selezionare **Immagine** in *Visualizza tutte le altre funzionalità di visione*. Selezionare quindi il riquadro **Didascalia immagine**.
 
     ![Screenshot del riquadro di didascalia delle immagini nella sezione immagine della pagina Visione e documento.](./media/vision-image-captioning-tile.png)
+
+1. Nella pagina **Aggiungi didascalie alle immagini** selezionare la risorsa dei *servizi di intelligenza artificiale di Azure* creata. 
 
 1. Nella pagina **Aggiungi didascalie alle immagini** esaminare la risorsa a cui si è connessi nel sottotitolo **Prova**. Non è necessario apportare modifiche. (*Nota*: se non è stata personalizzata una posizione della risorsa valida in precedenza durante la creazione delle risorse, potrebbe essere richiesto di creare una nuova risorsa dei Servizi di Azure AI che si trova in un'area valida. Sarà necessario creare la nuova risorsa per continuare con il lab.)  
 
