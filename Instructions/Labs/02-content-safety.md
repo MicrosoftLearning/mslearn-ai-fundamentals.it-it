@@ -51,7 +51,7 @@ Per iniziare, creare un progetto Fonderia Azure AI.
 
     ![Screenshot della demo di rilevamento del viso nel portale Fonderia Azure AI.](./media/detect-faces-demo.png)
 
-1. Scorrere verso il basso fino alla sezione **Esegui il codice**. Selezionare **Visualizza codice**. Scorrere in basso fino alla sezione che inizia con *import os*. Nel codice di esempio fornito, verranno visualizzati dei segnaposto in cui inserire una chiave e un endpoint.
+1. Scorrere verso il basso fino alla sezione **Esegui il codice**. Selezionare **Visualizza codice**. Scorrere verso il basso fino alla sezione che inizia con *importa sistema operativo*. Nel codice di esempio fornito, verranno visualizzati dei segnaposto in cui inserire una chiave e un endpoint.
 
     ![Schermata della schermata di visualizzazione del codice con una visualizzazione dei segnaposto del codice per la chiave e l'endpoint.](./media/view-code-example.png) 
 
