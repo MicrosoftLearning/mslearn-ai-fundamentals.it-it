@@ -177,8 +177,6 @@ Quando i documenti sono nella risorsa di archiviazione, è possibile usare Azure
 
 1. Lasciare la **Pianificazione** impostata su **Una volta**.
 
-1. Espandere le **opzioni Avanzate**. Assicurarsi che sia selezionata l'opzione **Chiavi di codifica Base 64** perché le chiavi di codifica possono rendere l'indice più efficiente.
-
 1. Selezionare **Invia** per creare l'origine dati, il set di competenze, l'indice e l'indicizzatore. L'indicizzatore viene eseguito automaticamente ed esegue la pipeline di indicizzazione, che:
     - Estrae il contenuto e i campi dei metadati del documento dall'origine dati.
     - Esegue il set di competenze cognitive per generare campi più arricchiti.
