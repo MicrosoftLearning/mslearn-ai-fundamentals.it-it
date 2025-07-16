@@ -9,42 +9,35 @@ L'IA generativa descrive una categoria di funzionalità all'interno dell'intelli
 
 ## Creare un progetto nel portale Fonderia Azure AI
 
-1. In una scheda del browser passare a [Fonderia Azure AI](https://ai.azure.com?azure-portal=true).
+1. In un Web browser, aprire il [Portale Fonderia Azure AI](https://ai.azure.com) su `https://ai.azure.com` e accedere usando le credenziali di Azure. Chiudere eventuali suggerimenti o riquadri di avvio rapido che vengono aperti al primo accesso. 
 
-1. Accedi con il tuo account. 
+1. Nel browser, passare a `https://ai.azure.com/managementCenter/allResources` e selezionare **Crea**. Scegliere quindi l'opzione per creare una nuova *risorsa Fonderia Azure AI*.
 
-1. Nella home page del portale Fonderia Azure AI, selezionare **Crea un progetto**. In Fonderia Azure AI, i progetti sono contenitori che consentono di organizzare il lavoro.  
+1. Nella procedura guidata *Crea un progetto*, immettere un nome valido per il progetto.
 
-    ![Screenshot della home page di Fonderia Azure AI con Crea un progetto selezionato.](./media/azure-ai-foundry-home-page.png)
+1. Espandere *Opzioni avanzate* per specificare le impostazioni seguenti per il progetto:
+    - **Sottoscrizione**: sottoscrizione di Azure.
+    - **Gruppo di risorse**: creare o selezionare un gruppo di risorse
+    - **Area**: selezionare una delle seguenti posizioni:
+        * Stati Uniti orientali
+        * Francia centrale
+        * Corea centrale
+        * Europa occidentale
+        * Stati Uniti occidentali
 
-1. Nel riquadro *Crea un progetto* verrà visualizzato un nome di progetto generato, che è possibile mantenere così com'è. A seconda che in passato sia stato creato un hub, verrà visualizzato un elenco di *nuove* risorse di Azure da creare o un elenco a discesa di hub esistenti. Se viene visualizzato l'elenco a discesa degli hub esistenti, selezionare *Crea nuovo hub*, creare un nome univoco per l'hub e selezionare *Avanti*.  
- 
-    ![Screenshot del riquadro Crea un progetto con nomi generati automaticamente per hub e progetto.](./media/azure-ai-foundry-create-project.png)
+    Attendere la creazione del progetto o dell'hub.
 
-    > **Importante**: per completare il resto del lab, è necessario eseguire il provisioning di una risorsa Servizi di Azure AI in una posizione specifica.
+1. Quando il progetto viene creato, verrà visualizzata una pagina *Panoramica* dei dettagli del progetto.
 
-1. Nello stesso riquadro *Crea un progetto* selezionare **Personalizza** e una delle **Posizioni** seguenti: Stati Uniti orientali, Francia centrale, Corea centrale, Europa occidentale o Stati Uniti occidentali per completare il resto del lab. Quindi, selezionare **Crea**. 
-
-1. Prendere nota delle risorse create: 
-- Servizi di Azure AI
-- Hub di Azure per intelligenza artificiale
-- Progetto Azure per intelligenza artificiale
-- Account di archiviazione
-- Key vault
-- Gruppo di risorse  
- 
-1. Dopo aver creato le risorse, verrà visualizzata la pagina *Panoramica* del progetto. Nel menu a sinistra nella schermata selezionare **Playground**.
- 
-    ![Screenshot del menu a sinistra nella schermata del progetto con Servizi di intelligenza artificiale selezionato.](./media/azure-ai-foundry-playgrounds.png)  
+1. Nel menu a sinistra nella schermata selezionare **Playground**.
 
 ## Esplorare l'IA generativa nel playground della chat di Fonderia Azure AI
 
 1. Nella pagina Playground di Fonderia Azure AI selezionare **Prova il playground della chat**. Il Playground della chat è un'interfaccia utente che consente di provare a creare un'applicazione di chat con modelli diversi di IA generativa.  
 
-1. Per usare il playground della chat, è necessario associarlo a un modello distribuito. Nel playground della chat, selezionare **Crea una distribuzione**. Cercare e selezionare **gpt-4**. 
+1. Per usare il playground della chat, è necessario associarlo a un modello distribuito. Nel playground Chat, è necessario avere selezionato **gpt-4o**. Se non vengono visualizzate distribuzioni, è necessario selezionare **+ Crea una distribuzione**, cercare **gpt-4o** e quindi selezionare **Conferma** e infine **Distribuisci**.
 
-1. Nella finestra *Distribuisci modello* mantenere la denominazione e la selezione predefinite e selezionare **Distribuisci**. La distribuzione del modello potrebbe richiedere alcuni minuti. È possibile controllare lo stato della distribuzione selezionando *Modelli ed endpoint* nel menu a sinistra in *Asset personali*.
-1. Nel playground della chat è possibile usare il modello distribuito quando viene visualizzato nel menu di selezione *Distribuzione*. Assicurarsi che il modello distribuito sia selezionato. Importante, è necessario selezionare **Applica modifiche** dopo aver apportato le modifiche all'*Installazione*. 
+1. Nel playground della chat è possibile usare il modello distribuito quando viene visualizzato nel menu di selezione *Distribuzione*. Importante, è necessario selezionare **Applica modifiche** dopo aver apportato le modifiche all'*Installazione*. 
 
 1. Considerare i modi seguenti per migliorare le risposte di un assistente di ia generativa:
     - Iniziare con un obiettivo specifico per l'operazione che si vuole che venga eseguita dall'assistente
@@ -102,3 +95,11 @@ L'IA generativa descrive una categoria di funzionalità all'interno dell'intelli
 1. Esaminare la risposta, che dovrebbe fornire un elenco numerato di attrazioni da vedere a Parigi.
 
 1. Al termine, è possibile chiudere la finestra del browser.
+
+## Eseguire la pulizia
+
+Se non si intende eseguire altri esercizi, eliminare eventuali risorse non più necessarie. In questo modo si evita di accumulare costi non necessari.
+
+1. Aprire il **portale di Azure** su [https://portal.azure.com](https://portal.azure.com) e selezionare il gruppo di risorse che contiene la risorsa creata.
+
+1. Selezionare la risorsa e poi **Elimina**, quindi **Sì** per confermare. La risorsa viene quindi eliminata.
