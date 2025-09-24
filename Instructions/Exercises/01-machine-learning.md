@@ -31,7 +31,7 @@ Per usare Azure Machine Learning, è necessario effettuare il provisioning di un
 
 #### Avvia Studio 
 
-1. Nella risorsa dell'area di lavoro di Azure Machine Learning, selezionare **Avvia studio** (o aprire una nuova scheda del browser e passare a [https://ml.azure.com](https://ml.azure.com?azure-portal=true) e accedere a studio di Azure Machine Learning usando l'account Microsoft). Chiudere eventuali messaggi visualizzati.
+1. Nella risorsa dell'area di lavoro di Azure Machine Learning, selezionare **Avvia studio** (o aprire una nuova scheda del browser e passare a [https://ml.azure.com](https://ml.azure.com) e accedere a studio di Azure Machine Learning usando l'account Microsoft). Chiudere eventuali messaggi visualizzati.
 
 1. Nello studio di Azure Machine Learning verrà visualizzata l'area di lavoro appena creata. In caso contrario, selezionare **All workspaces** (Tutte le aree di lavoro) nel menu a sinistra e quindi selezionare l'area di lavoro appena creata.
 
@@ -49,26 +49,27 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
 
     - **Nome processo**: il campo Nome processo deve essere già prepopolato con un nome univoco. Mantenerlo invariato.
     - **Nome nuovo esperimento**: `mslearn-bike-rental`
-    - **Descrizione**: Machine Learning automatizzato per la previsione del noleggio di biciclette
+    - **Descrizione**: `Automated machine learning for bike rental prediction`
     - **Tag**: *nessuno*
 
    **Tipo di attività e dati**:
 
     - **Selezionare il tipo di attività**: regressione
-    - **Selezionare il set di dati**: creare un nuovo set di dati con le impostazioni seguenti:
-        - **Tipo di dati**:
-            - **Nome**: `bike-rentals`
-            - **Descrizione**: `Historic bike rental data`
-            - **Tipo**: Tabella (mltable)
-        - **Origine dati**:
-            - Selezionare **Da file locali**
-        - **Tipo archiviazione di destinazione**:
-            - **Tipo di archivio dati**: archiviazione BLOB di Azure
-            - **Nome**: workspaceblobstore
-        - **Selezione MLtable**:
-            - **Caricare la cartella**: *Scaricare e decomprimere la cartella contenente i due file necessari da cui caricare* `https://aka.ms/bike-rentals`
-
-        Seleziona **Crea**. Dopo aver creato il set di dati, selezionare il set di dati **bike-rentals** per continuare a inviare il processo di ML automatizzato.
+    - **Seleziona dati**:
+        - Creare un nuovo asset di dati con le impostazioni seguenti:
+            - **Tipo di dati**:
+                - **Nome**: `bike-rentals`
+                - **Descrizione**: `Historic bike rental data`
+                - **Tipo**: Tabella (mltable)
+            - **Origine dati**:
+                - Selezionare **Da file locali**
+            - **Tipo archiviazione di destinazione**:
+                - **Tipo di archivio dati**: archiviazione BLOB di Azure
+                - **Nome**: workspaceblobstore
+            - **Selezione MLtable**:
+                - *Scaricare e decomprimere la [cartella bike-data](https://aka.ms/bike-rentals) da `https://aka.ms/bike-rentals`.*
+                - **Caricare la cartella**: *Caricare la cartella **bike-data** estratta, che contiene i file di definizione dei dati e delle tabelle necessari per il set di dati di training.*
+        - Selezionare l'asset di dati **bike-rentals** appena creato e continuare a definire il processo di Machine Learning automatizzato nella pagina successiva (**Impostazioni attività**).
 
     **Impostazioni attività**:
 
@@ -77,8 +78,8 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
     - **Colonna di destinazione**: noleggi (intero)
     - **Impostazioni aggiuntive per la configurazione**:
         - **Metrica primaria**: NormalizedRootMeanSquaredError
-        - **Spiegare il modello migliore**: *non selezionato*
-        - **Abilitare l'impilamento dell'insieme**: *Non selezionata*
+        - **Spiega modello migliore**: *<u>De</u>selezionato*
+        - **Abilitare l'impilamento dell'insieme**: *<u>De</u>selezionato*
         - **Usare tutti i modelli supportati**: <u>deselezionato</u>. *Durante il processo si proveranno solo alcuni algoritmi specifici.*
         - **Modelli consentiti**: *selezionare solo **RandomForest** e **LightGBM**. Normalmente si vorrà provare il maggior numero possibile di modelli, ma ogni modello aggiunto aumenta il tempo necessario per eseguire il processo.*
     - **Limiti**: *espandere questa sezione*
@@ -134,16 +135,16 @@ Al termine del processo di Machine Learning automatizzato, è possibile esaminar
 
     > **Nota** Se viene visualizzato un messaggio che indica che la quota non è sufficiente per selezionare la macchina virtuale *Standard_DS3_v2*, selezionarne un'altra.
 
-1. Attendere l'avvio della distribuzione. L'operazione potrebbe richiedere alcuni secondi. Lo **Stato di distribuzione** per l'endpoint **predizione-noleggi** verrà indicato nella parte principale della pagina come *In esecuzione*.
+1. Attendere l'avvio della distribuzione. L'operazione potrebbe richiedere alcuni secondi. Lo **Stato di distribuzione** per l'endpoint verrà indicato nella parte principale della pagina come *In esecuzione*.
 1. Attendere che lo **Stato di distribuzione** cambi in *Completato*. L'operazione potrebbe richiedere da 5 a 10 minuti.
 
 ## Testare il servizio distribuito
 
 A questo punto è possibile testare il servizio distribuito.
 
-1. In Azure Machine Learning Studio, nel menu di sinistra, selezionare **Endpoint** e aprire l'endpoint in tempo reale **previsione-noleggi**.
+1. In Studio di Azure Machine Learning, nel menu di sinistra, selezionare **Endpoint** e aprire l'endpoint in tempo reale creato.
 
-1. Nella pagina dell'endpoint in tempo reale **previsione-noleggi** visualizzare la scheda **Test**.
+1. Nella pagina dell'endpoint in tempo reale visualizzare la scheda **Test**.
 
 1. Nel riquadro **Dati di input per testare l'endpoint** sostituire il codice JSON del modello con i dati di input seguenti:
 
@@ -183,17 +184,24 @@ A questo punto è possibile testare il servizio distribuito.
 
     Il riquadro di test ha considerato i dati di input e ha usato il modello sottoposto a training per restituire il numero stimato di noleggi.
 
-Di seguito vengono descritte le operazioni eseguite. È stato usato un set di dati cronologici relativi al noleggio di biciclette per eseguire il training di un modello. Il modello stima il numero di noleggi di biciclette previsti in un determinato giorno, in base a *caratteristiche* stagionali e meteorologiche.
+## Visualizzare il codice per l'utilizzo del servizio
+
+Ora che si dispone di un endpoint di servizio predittivo, gli sviluppatori possono creare applicazioni che lo usano.
+
+1. Nella pagina endpoint in tempo reale visualizzare la **scheda Utilizzo**.
+1. Esaminare il codice di esempio per usare l'endpoint, disponibile per più linguaggi di programmazione.
+
+Di seguito vengono descritte le operazioni eseguite. È stato usato un set di dati cronologici relativi al noleggio di biciclette per eseguire il training di un modello. Il modello stima il numero di noleggi di biciclette previsti in un determinato giorno, in base a *caratteristiche* stagionali e meteorologiche. Infine, è stato testato il modello ed è stato esaminato il codice che uno sviluppatore può usare per creare un'applicazione che lo utilizzi.
 
 ## Eliminazione
 
 Il servizio Web creato è ospitato in un'*Istanza di contenitore di Azure*. Se non si vogliono eseguire altri esperimenti con tale servizio, è consigliabile eliminare l'endpoint per evitare di accumulare tempi di utilizzo superflui per Azure.
 
-1. In [Azure Machine Learning Studio](https://ml.azure.com?azure-portal=true) nella scheda **Endpoint** selezionare l'endpoint **previsione-noleggi**. Selezionare quindi **Elimina** e confermare l'eliminazione dell'endpoint.
+1. In [Studio di Azure Machine Learning](https://ml.azure.com) nella scheda **Endpoint** selezionare l'endpoint distribuito. Selezionare quindi **Elimina** e confermare l'eliminazione dell'endpoint.
 
     L'eliminazione delle risorse di calcolo garantisce che alla sottoscrizione non vengano addebitati i costi di calcolo corrispondenti. Verrà tuttavia addebitato un importo ridotto per l'archiviazione dei dati, fintanto che l'area di lavoro di Azure Machine Learning è presente nella sottoscrizione. Se è stata completata l'esplorazione di Azure Machine Learning, è possibile eliminare l'area di lavoro di Azure Machine Learning e le risorse associate.
 
 Per eliminare l'area di lavoro:
 
-1. Nel [portale di Azure](https://portal.azure.com?azure-portal=true), nella pagina **Gruppi di risorse**, aprire il gruppo di risorse specificato durante la creazione dell'area di lavoro di Azure Machine Learning.
+1. Nel [portale di Azure](https://portal.azure.com), nella pagina **Gruppi di risorse**, aprire il gruppo di risorse specificato durante la creazione dell'area di lavoro di Azure Machine Learning.
 2. Fare clic su **Elimina gruppo di risorse**, digitare il nome del gruppo di risorse per confermare che si vuole eliminarlo e quindi selezionare **Elimina**.
