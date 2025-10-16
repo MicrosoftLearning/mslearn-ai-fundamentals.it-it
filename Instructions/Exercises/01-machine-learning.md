@@ -54,7 +54,7 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
 
    **Tipo di attività e dati**:
     
-    >**NOTA**: Alcune sottoscrizioni hanno autorizzazioni che non consentono l'aggiunta di *bike-data* a *workspaceblobstore*. Se si verifica questo problema, è attualmente necessario passare a una sottoscrizione personale o modificare le autorizzazioni della sottoscrizione. 
+    >**NOTA**: Alcune sottoscrizioni hanno autorizzazioni che non consentono l'aggiunta di *bike-data* a *workspaceblobstore*. Se si verifica questo problema, è necessario passare a un'altra sottoscrizione.
 
     - **Selezionare il tipo di attività**: regressione
     - **Seleziona dati**:
