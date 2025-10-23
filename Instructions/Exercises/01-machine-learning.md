@@ -53,6 +53,8 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
     - **Tag**: *nessuno*
 
    **Tipo di attività e dati**:
+    
+    >**NOTA**: Alcune sottoscrizioni hanno autorizzazioni che non consentono l'aggiunta di *bike-data* a *workspaceblobstore*. Se si verifica questo problema, è necessario passare a un'altra sottoscrizione.
 
     - **Selezionare il tipo di attività**: regressione
     - **Seleziona dati**:
@@ -69,6 +71,7 @@ Machine Learning automatizzato consente di provare più algoritmi e parametri pe
             - **Selezione MLtable**:
                 - *Scaricare e decomprimere la [cartella bike-data](https://aka.ms/bike-rentals) da `https://aka.ms/bike-rentals`.*
                 - **Caricare la cartella**: *Caricare la cartella **bike-data** estratta, che contiene i file di definizione dei dati e delle tabelle necessari per il set di dati di training.*
+                - **Nota**: *se viene visualizzato un messaggio che richiede di ignorare la convalida dei dati per continuare, selezionare l'opzione per ignorare la convalida dei dati.*
         - Selezionare l'asset di dati **bike-rentals** appena creato e continuare a definire il processo di Machine Learning automatizzato nella pagina successiva (**Impostazioni attività**).
 
     **Impostazioni attività**:
